@@ -1,0 +1,10 @@
+/* world-map-page.component.css */
+.world-map-background {
+    min-height: 100vh;  /* This will cover the full viewport height */
+    width: 100%;  /* This will cover the full viewport width */
+    background-image: url("/assets/world-map.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  

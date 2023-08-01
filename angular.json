@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "myApp": {
+    "reviclades-angular-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -53,10 +53,12 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "myApp:build:production"
+              "browserTarget": "reviclades-angular-app:build:production",
+              "liveReload": true
             },
             "development": {
-              "browserTarget": "myApp:build:development"
+              "browserTarget": "reviclades-angular-app:build:development",
+              "liveReload": true
             }
           },
           "defaultConfiguration": "development"
@@ -64,7 +66,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "myApp:build"
+            "browserTarget": "reviclades-angular-app:build"
           }
         },
         "test": {
