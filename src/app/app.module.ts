@@ -10,6 +10,7 @@ import { WorldMapPageComponent } from './world-map-page/world-map-page.component
 import { CardLibraryPageComponent } from './card-library-page/card-library-page.component';
 import { RoadmapPageComponent } from './roadmap-page/roadmap-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AboutPageComponent } from './about-page/about-page.component';
     CardLibraryPageComponent,
     RoadmapPageComponent,
     AboutPageComponent,
+    LoginComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, RouterModule],
   providers: [],
