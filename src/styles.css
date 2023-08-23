@@ -108,3 +108,6 @@ body {
   background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
 }
 
+h4 {
+  color:#FFFFFF;
+}

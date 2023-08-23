@@ -11,6 +11,7 @@ import { CardLibraryPageComponent } from './card-library-page/card-library-page.
 import { RoadmapPageComponent } from './roadmap-page/roadmap-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { LoginComponent } from './login/login.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { LoginComponent } from './login/login.component';
     RoadmapPageComponent,
     AboutPageComponent,
     LoginComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, RouterModule],
   providers: [],
