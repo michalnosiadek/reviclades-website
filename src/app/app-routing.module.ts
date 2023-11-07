@@ -5,6 +5,7 @@ import { WorldMapPageComponent } from './world-map-page/world-map-page.component
 import { CardLibraryPageComponent } from './card-library-page/card-library-page.component';
 import { RoadmapPageComponent } from './roadmap-page/roadmap-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
+import { CharactersPageComponent } from './characters-page/characters-page.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'card-library', component: CardLibraryPageComponent },
   { path: 'roadmap', component: RoadmapPageComponent },
   { path: 'about', component: AboutPageComponent },
+  { path: 'characters', component: CharactersPageComponent },
 ];
 
 @NgModule({

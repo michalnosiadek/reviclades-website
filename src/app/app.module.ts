@@ -12,6 +12,7 @@ import { RoadmapPageComponent } from './roadmap-page/roadmap-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { CharactersPageComponent } from './characters-page/characters-page.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     AboutPageComponent,
     LoginComponent,
     FooterComponent,
+    CharactersPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, RouterModule],
   providers: [],

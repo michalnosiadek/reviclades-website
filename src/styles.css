@@ -83,6 +83,14 @@ body {
 
 }
 
+.hero-4{
+  background: url('assets/stronka/dark-clouds.png ') center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+
+}
+
+
 
 .transparency {
   background-color: rgba(0, 0, 0, 0.5);
