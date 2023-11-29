@@ -143,3 +143,32 @@ html {
     font-size: 1.6rem;
   }
 }
+
+.background-rough {
+  position: relative;
+  z-index: 1; /* Make sure this has a higher z-index */
+  border: 2px solid var(--revi-text) !important;
+  border-radius: 2rem; /* Adjust the radius as needed */
+  overflow: hidden; /* Ensures the background respects the border radius */
+  color: var(--revi-text) !important
+}
+
+.background-rough::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Behind the content */
+  background: url('assets/stronka/background-rough.webp') center/cover no-repeat;
+  opacity: 0.22; /* Adjust for desired transparency */
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+/* Content inside .background-rough */
+.background-rough > * {
+  position: relative; /* Ensures content is on top */
+  z-index: 2; /* Higher z-index than the pseudo-element */
+}
