@@ -26,6 +26,8 @@
   --revi-aqua-blue: #04666F;
 
   --discord: #5865F2;
+
+  --overlay: #14191E;
 }
 
 * {
@@ -162,9 +164,9 @@ html {
   bottom: 0;
   z-index: -1; /* Behind the content */
   background: url('assets/stronka/background-rough.webp') center/cover no-repeat;
-  opacity: 0.22; /* Adjust for desired transparency */
-  background-blend-mode: darken;
-  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  background-blend-mode: overlay;
+  background-color: rgba(20, 25, 30, 0.86);
+  border-radius: 10px;
 }
 
 /* Content inside .background-rough */
