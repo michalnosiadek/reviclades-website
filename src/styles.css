@@ -148,11 +148,12 @@ html {
 
 .background-rough {
   position: relative;
-  z-index: 1; /* Make sure this has a higher z-index */
-  border: 2px solid var(--revi-text) !important;
-  border-radius: 2rem; /* Adjust the radius as needed */
-  overflow: hidden; /* Ensures the background respects the border radius */
-  color: var(--revi-text) !important
+  z-index: 1;
+  border: 2px solid var(--revi-text) !important; /* Fallback border */
+  border-radius: 2rem;
+  overflow: hidden;
+  color: var(--revi-text) !important;
+
 }
 
 .background-rough::before {
@@ -162,15 +163,25 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1; /* Behind the content */
+  z-index: -1;
   background: url('assets/stronka/background-rough.webp') center/cover no-repeat;
-  background-blend-mode: overlay;
   background-color: rgba(20, 25, 30, 0.86);
-  border-radius: 10px;
+  background-blend-mode: overlay;
+  opacity: 0.22;
+  border-radius: 2rem;
 }
 
 /* Content inside .background-rough */
 .background-rough > * {
-  position: relative; /* Ensures content is on top */
-  z-index: 2; /* Higher z-index than the pseudo-element */
+  position: relative;
+  z-index: 2;
+}
+
+
+p, li{
+  font-size: clamp(1rem, 1.25vw, 1.25rem)
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 5rem)
 }
