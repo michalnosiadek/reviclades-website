@@ -6,6 +6,14 @@ import { CardLibraryPageComponent } from './card-library-page/card-library-page.
 import { RoadmapPageComponent } from './roadmap-page/roadmap-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { CharactersPageComponent } from './characters-page/characters-page.component';
+import { FactionsPageComponent } from './factions-page/factions-page.component';
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { FireBerserkerPageComponent } from './characters-page/characters/fire-berserker-page/fire-berserker-page.component';
+import { GorantulanHunterPageComponent } from './characters-page/characters/gorantulan-hunter-page/gorantulan-hunter-page.component';
+import { ShrimpMonkPageComponent } from './characters-page/characters/shrimp-monk-page/shrimp-monk-page.component';
+import { BatPriestPageComponent } from './characters-page/characters/bat-priest-page/bat-priest-page.component';
+import { CryptShamblerPageComponent } from './characters-page/characters/crypt-shambler-page/crypt-shambler-page.component';
+import { CartographerPageComponent } from './characters-page/characters/cartographer-page/cartographer-page.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -14,6 +22,15 @@ const routes: Routes = [
   { path: 'roadmap', component: RoadmapPageComponent },
   { path: 'about', component: AboutPageComponent },
   { path: 'characters', component: CharactersPageComponent },
+  { path: 'factions', component: FactionsPageComponent },
+  { path: 'fire-berserker', component: FireBerserkerPageComponent },
+  { path: 'gorantulan-hunter', component: GorantulanHunterPageComponent },
+  { path: 'shrimp-monk', component: ShrimpMonkPageComponent },
+  { path: 'bat-priest', component: BatPriestPageComponent },
+  { path: 'crypt-shambler', component: CryptShamblerPageComponent },
+  { path: 'cartographer', component: CartographerPageComponent },
+
+  { path: '**', component: NotFoundPageComponent },
 ];
 
 @NgModule({

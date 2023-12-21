@@ -65,13 +65,13 @@ body {
 }
 
 .hero{
-  background: url('assets/stronka/arena-dark.png') center/cover no-repeat;
+  background: url('assets/stronka/arena-dark.webp') center/cover no-repeat;
   min-height: 100vh;
   display: flex;
 } 
 
 .hero-2{
-  background: url('assets/stronka/revi-westfall.png ') center/cover no-repeat;
+  background: url('assets/stronka/revi-westfall.webp ') center/cover no-repeat;
   min-height: 100vh;
   display: flex;
 
@@ -79,7 +79,7 @@ body {
 
 
 .hero-3{
-  background: url('assets/stronka/arena-light.png ') center/cover no-repeat;
+  background: url('assets/stronka/arena-light.webp ') center/cover no-repeat;
   min-height: 100vh;
   display: flex;
 
