@@ -21,6 +21,13 @@ import { ShrimpMonkPageComponent } from './characters-page/characters/shrimp-mon
 import { BatPriestPageComponent } from './characters-page/characters/bat-priest-page/bat-priest-page.component';
 import { CryptShamblerPageComponent } from './characters-page/characters/crypt-shambler-page/crypt-shambler-page.component';
 import { CartographerPageComponent } from './characters-page/characters/cartographer-page/cartographer-page.component';
+import { FireFolkComponent } from './factions-page/factions/fire-folk/fire-folk.component';
+import { WaterClanComponent } from './factions-page/factions/water-clan/water-clan.component';
+import { EarthNationComponent } from './factions-page/factions/earth-nation/earth-nation.component';
+import { AirKingdomComponent } from './factions-page/factions/air-kingdom/air-kingdom.component';
+import { LightPilgrimsComponent } from './factions-page/factions/light-pilgrims/light-pilgrims.component';
+import { DarkCultComponent } from './factions-page/factions/dark-cult/dark-cult.component';
+import { GorantulandComponent } from './factions-page/factions/gorantuland/gorantuland.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +49,13 @@ import { CartographerPageComponent } from './characters-page/characters/cartogra
     BatPriestPageComponent,
     CryptShamblerPageComponent,
     CartographerPageComponent,
+    FireFolkComponent,
+    WaterClanComponent,
+    EarthNationComponent,
+    AirKingdomComponent,
+    LightPilgrimsComponent,
+    DarkCultComponent,
+    GorantulandComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, RouterModule],
   providers: [],
