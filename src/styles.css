@@ -190,3 +190,9 @@ p, li{
 h1 {
   font-size: clamp(2rem, 5vw, 5rem)
 }
+
+@media (max-width: 575px) {
+  .container.my-5.bg-body-tertiary.background-rough {
+    max-width: 85%;
+  }
+}
