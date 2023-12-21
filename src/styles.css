@@ -54,6 +54,11 @@ body {
   background-color: var(--revi-wheat-100)
 }
 
+.revi-page-dark-background {
+  background-color: var(--revicla-blue-100) !important;
+}
+
+
 
 .revi-link.active
  {
