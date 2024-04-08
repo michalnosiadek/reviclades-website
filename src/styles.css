@@ -42,6 +42,10 @@ body {
   background-color: var(--revi-dark);
 }
 
+p {
+  text-justify: auto;
+}
+
 .revi-dark-background {
   background-color: var(--revi-dark) !important
 }
@@ -184,7 +188,7 @@ html {
 
 
 p, li{
-  font-size: clamp(1rem, 1.25vw, 1.25rem)
+  font-size: clamp(1.3rem, 1.25vw, 1.25rem)
 }
 
 h1 {
