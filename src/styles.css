@@ -1,33 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:wght@1;200;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:wght@1;200;500&display=swap");
 /* styles.css */
 
 :root {
-  --revi-wheat-30: #FDE5C0;
-  --revi-wheat-100: #F7A82D;
+  --revi-wheat-30: #fde5c0;
+  --revi-wheat-100: #f7a82d;
   --revi-wheat-130: #f5c77d;
   --revicla-blue-100: #19212c;
-  --revicla-blue-90: #37414F;
+  --revicla-blue-90: #37414f;
 
-  --revi-logo-6: #9AFFFF;
-  --revi-logo-5: #476C7C;
-  --revi-logo-4: #365E67;
-  --revi-logo-3: #364B5C;
+  --revi-logo-6: #9affff;
+  --revi-logo-5: #476c7c;
+  --revi-logo-4: #365e67;
+  --revi-logo-3: #364b5c;
   --revi-logo-2: #233647;
   --revi-logo-1: #182633;
 
-  --revi-text: #EBE6DC;
+  --revi-text: #ebe6dc;
   --revi-hover: #ebc374;
-  --revi-dark: #14191E;
+  --revi-dark: #14191e;
 
-  --revi-l-ground: #A76638;
-  --revi-l-brown: #A65216;
+  --revi-l-ground: #a76638;
+  --revi-l-brown: #a65216;
   --revi-brown: #593115;
-  --revi-light: #37D7E5;
-  --revi-aqua-blue: #04666F;
+  --revi-light: #37d7e5;
+  --revi-aqua-blue: #04666f;
 
-  --discord: #5865F2;
+  --discord: #5865f2;
 
-  --overlay: #14191E;
+  --overlay: #14191e;
 }
 
 * {
@@ -36,7 +36,7 @@
 }
 
 h1 {
-  color: var(--revi-text)
+  color: var(--revi-text);
 }
 body {
   background-color: var(--revi-dark);
@@ -47,25 +47,22 @@ p {
 }
 
 .revi-dark-background {
-  background-color: var(--revi-dark) !important
+  background-color: var(--revi-dark) !important;
 }
 
 .revi-wheat-background {
-  background-color: var(--revi-wheat-100)
+  background-color: var(--revi-wheat-100);
 }
 
 .btn-revi:hover {
-  background-color: var(--revi-wheat-100)
+  background-color: var(--revi-wheat-100);
 }
 
 .revi-page-dark-background {
   background-color: var(--revicla-blue-100) !important;
 }
 
-
-
-.revi-link.active
- {
+.revi-link.active {
   color: var(--revi-wheat-100) !important;
 }
 .revi-link:hover,
@@ -73,35 +70,29 @@ p {
   color: var(--revi-wheat-30) !important;
 }
 
-.hero{
-  background: url('assets/stronka/arena-dark.webp') center/cover no-repeat;
+.hero {
+  background: url("assets/stronka/arena-dark.webp") center/cover no-repeat;
   min-height: 100vh;
   display: flex;
-} 
-
-.hero-2{
-  background: url('assets/stronka/revi-westfall.webp ') center/cover no-repeat;
-  min-height: 100vh;
-  display: flex;
-
 }
 
-
-.hero-3{
-  background: url('assets/stronka/arena-light.webp ') center/cover no-repeat;
+.hero-2 {
+  background: url("assets/stronka/revi-westfall.webp ") center/cover no-repeat;
   min-height: 100vh;
   display: flex;
-
 }
 
-.hero-4{
-  background: url('assets/stronka/clouds.webp ') center/cover no-repeat;
+.hero-3 {
+  background: url("assets/stronka/arena-light.webp ") center/cover no-repeat;
   min-height: 100vh;
   display: flex;
-
 }
 
-
+.hero-4 {
+  background: url("assets/stronka/clouds.webp ") center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+}
 
 .transparency {
   background-color: rgba(0, 0, 0, 0.5);
@@ -109,15 +100,15 @@ p {
 }
 
 .btn-discord:hover {
-  background-color: #4752C4
+  background-color: #4752c4;
 }
 .btn-discord {
   background-color: var(--discord);
   color: white;
 }
 
-.revo-text{
-  color: var(--revi-text) !important
+.revo-text {
+  color: var(--revi-text) !important;
 }
 
 .text-center {
@@ -126,11 +117,14 @@ p {
 
 .bg-success {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(
+    var(--bs-success-rgb),
+    var(--bs-bg-opacity)
+  ) !important;
 }
 
 h4 {
-  color:white;
+  color: white;
 }
 
 html {
@@ -162,18 +156,17 @@ html {
   border-radius: 2rem;
   overflow: hidden;
   color: var(--revi-text) !important;
-
 }
 
 .background-rough::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: -1;
-  background: url('assets/stronka/background-rough.webp') center/cover no-repeat;
+  background: url("assets/stronka/background-rough.webp") center/cover no-repeat;
   background-color: rgba(20, 25, 30, 0.86);
   background-blend-mode: overlay;
   opacity: 0.22;
@@ -186,17 +179,23 @@ html {
   z-index: 2;
 }
 
-
-p, li{
-  font-size: clamp(1.3rem, 1.25vw, 1.25rem)
+p,
+li {
+  font-size: clamp(1.3rem, 1.25vw, 1.25rem);
 }
 
 h1 {
-  font-size: clamp(2rem, 5vw, 5rem)
+  font-size: clamp(2rem, 5vw, 5rem);
 }
 
 @media (max-width: 575px) {
   .container.my-5.bg-body-tertiary.background-rough {
     max-width: 85%;
   }
+}
+
+.character-video {
+  max-width: 300px; /* Adjust as desired */
+  width: 100%;
+  height: auto;
 }

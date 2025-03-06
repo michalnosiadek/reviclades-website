@@ -1,125 +1,734 @@
 <section class="revi-page-dark-background">
   <div class="container py-5">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
-        <div class="card">
-          <img
-            src="assets/Stronka/gladiators.webp"
-            class="card-img-top"
-            alt="gladiators"
-          />
-          <div class="card-body">
-            <h2 class="card-title">Fire Berserker</h2>
-            <p class="card-text">Forgotten Ruthless Warrior</p>
-            <button
-              type="button"
-              routerLink="/fire-berserker"
-              class="btn btn-revi btn-warning btn-lg px-4 me-md-2"
-            >
-              Learn more
-            </button>
-          </div>
-        </div>
+    <!-- 1) Fire Berserker (video left, tabs right) -->
+    <div class="row align-items-center mb-5">
+      <!-- Video on the left -->
+      <div class="col-md-4">
+        <video
+          class="img-fluid character-video"
+          src="assets/characters/fire-berserker.webm"
+          autoplay
+          muted
+          loop
+          playsinline
+        >
+          Your browser does not support the video tag.
+        </video>
       </div>
-      <div class="col">
-        <div class="card">
-          <img
-            src="assets/Stronka/gladiators.webp"
-            class="card-img-top"
-            alt="gladiators"
-          />
-          <div class="card-body">
-            <h2 class="card-title">Gorantulan Hunter</h2>
-            <p class="card-text">Pure-hearted Hunter of the Gorantulans</p>
+      <!-- Tabs on the right -->
+      <div class="col-md-8">
+        <h2>Fire Berserker</h2>
+        <ul class="nav nav-tabs" id="fireBerserkerTabs" role="tablist">
+          <li class="nav-item" role="presentation">
             <button
+              class="nav-link active"
+              id="fireBerserkerBackground-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#fireBerserkerBackground"
               type="button"
-              routerLink="/gorantulan-hunter"
-              class="btn btn-revi btn-warning btn-lg px-4 me-md-2"
+              role="tab"
+              aria-controls="fireBerserkerBackground"
+              aria-selected="true"
             >
-              Learn more
+              Background
             </button>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img
-            src="assets/Stronka/gladiators.webp"
-            class="card-img-top"
-            alt="gladiators"
-          />
-          <div class="card-body">
-            <h2 class="card-title">Shrimp Monk</h2>
-            <p class="card-text">Greedy martial artist</p>
+          </li>
+          <li class="nav-item" role="presentation">
             <button
+              class="nav-link"
+              id="fireBerserkerAbility1-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#fireBerserkerAbility1"
               type="button"
-              routerLink="/shrimp-monk"
-              class="btn btn-revi btn-warning btn-lg px-4 me-md-2"
+              role="tab"
+              aria-controls="fireBerserkerAbility1"
+              aria-selected="false"
             >
-              Learn more
+              Ability 1
             </button>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img
-            src="assets/Stronka/gladiators.webp"
-            class="card-img-top"
-            alt="gladiators"
-          />
-          <div class="card-body">
-            <h2 class="card-title">Bat Priest</h2>
-            <p class="card-text">Cunning priestess of the Dark Lord</p>
+          </li>
+          <li class="nav-item" role="presentation">
             <button
+              class="nav-link"
+              id="fireBerserkerAbility2-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#fireBerserkerAbility2"
               type="button"
-              routerLink="/bat-priest"
-              class="btn btn-revi btn-warning btn-lg px-4 me-md-2"
+              role="tab"
+              aria-controls="fireBerserkerAbility2"
+              aria-selected="false"
             >
-              Learn more
+              Ability 2
             </button>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img
-            src="assets/Stronka/gladiators.webp"
-            class="card-img-top"
-            alt="gladiators"
-          />
-          <div class="card-body">
-            <h2 class="card-title">Crypt Shambler</h2>
-            <p class="card-text">Mechanical construct overtaken by madness</p>
+          </li>
+          <li class="nav-item" role="presentation">
             <button
+              class="nav-link"
+              id="fireBerserkerAbility3-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#fireBerserkerAbility3"
               type="button"
-              routerLink="/crypt-shambler"
-              class="btn btn-revi btn-warning btn-lg px-4 me-md-2"
+              role="tab"
+              aria-controls="fireBerserkerAbility3"
+              aria-selected="false"
             >
-              Learn more
+              Ability 3
             </button>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img
-            src="assets/Stronka/gladiators.webp"
-            class="card-img-top"
-            alt="gladiators"
-          />
-          <div class="card-body">
-            <h2 class="card-title">Cartographer</h2>
-            <p class="card-text">
-              Bizarre artist that travel world and catch beuty of it on paper
+          </li>
+        </ul>
+        <div class="tab-content mt-3" id="fireBerserkerTabsContent">
+          <div
+            class="tab-pane fade show active"
+            id="fireBerserkerBackground"
+            role="tabpanel"
+            aria-labelledby="fireBerserkerBackground-tab"
+          >
+            <p>
+              <strong>Short Description:</strong> Forgotten Ruthless Warrior
             </p>
+            <p>Lorem ipsum dolor sit amet, Fire Berserker’s deeper lore...</p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="fireBerserkerAbility1"
+            role="tabpanel"
+            aria-labelledby="fireBerserkerAbility1-tab"
+          >
+            <p><strong>Ability 1:</strong> Searing Strike</p>
+            <p>Channels scorching flames into each swing, igniting foes.</p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="fireBerserkerAbility2"
+            role="tabpanel"
+            aria-labelledby="fireBerserkerAbility2-tab"
+          >
+            <p><strong>Ability 2:</strong> Molten Rage</p>
+            <p>
+              Unleashes a burst of fiery wrath, increasing attack speed and
+              damage.
+            </p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="fireBerserkerAbility3"
+            role="tabpanel"
+            aria-labelledby="fireBerserkerAbility3-tab"
+          >
+            <p><strong>Ability 3:</strong> Blazing Wrath</p>
+            <p>Summons a searing wave of flame that engulfs nearby enemies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2) Gorantulan Hunter (video left, tabs right) -->
+    <div class="row align-items-center mb-5">
+      <!-- Video on the left -->
+      <div class="col-md-4">
+        <video
+          class="img-fluid character-video"
+          src="assets/characters/gorantulan-hunter.webm"
+          autoplay
+          muted
+          loop
+          playsinline
+        >
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <!-- Tabs on the right -->
+      <div class="col-md-8">
+        <h2>Gorantulan Hunter</h2>
+        <ul class="nav nav-tabs" id="gorantulanHunterTabs" role="tablist">
+          <li class="nav-item" role="presentation">
             <button
+              class="nav-link active"
+              id="gorantulanHunterBackground-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#gorantulanHunterBackground"
               type="button"
-              routerLink="/cartographer"
-              class="btn btn-revi btn-warning btn-lg px-4 me-md-2"
+              role="tab"
+              aria-controls="gorantulanHunterBackground"
+              aria-selected="true"
             >
-              Learn more
+              Background
             </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="gorantulanHunterAbility1-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#gorantulanHunterAbility1"
+              type="button"
+              role="tab"
+              aria-controls="gorantulanHunterAbility1"
+              aria-selected="false"
+            >
+              Ability 1
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="gorantulanHunterAbility2-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#gorantulanHunterAbility2"
+              type="button"
+              role="tab"
+              aria-controls="gorantulanHunterAbility2"
+              aria-selected="false"
+            >
+              Ability 2
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="gorantulanHunterAbility3-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#gorantulanHunterAbility3"
+              type="button"
+              role="tab"
+              aria-controls="gorantulanHunterAbility3"
+              aria-selected="false"
+            >
+              Ability 3
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content mt-3" id="gorantulanHunterTabsContent">
+          <div
+            class="tab-pane fade show active"
+            id="gorantulanHunterBackground"
+            role="tabpanel"
+            aria-labelledby="gorantulanHunterBackground-tab"
+          >
+            <p>
+              <strong>Short Description:</strong> Pure-hearted Hunter of the
+              Gorantulans
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, Gorantulan Hunter’s deeper lore...
+            </p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="gorantulanHunterAbility1"
+            role="tabpanel"
+            aria-labelledby="gorantulanHunterAbility1-tab"
+          >
+            <p><strong>Ability 1:</strong> Jungle Snare</p>
+            <p>Sets a hidden trap that immobilizes unwary foes.</p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="gorantulanHunterAbility2"
+            role="tabpanel"
+            aria-labelledby="gorantulanHunterAbility2-tab"
+          >
+            <p><strong>Ability 2:</strong> Beastly Bond</p>
+            <p>Summons a Gorantulan companion to assist in battle.</p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="gorantulanHunterAbility3"
+            role="tabpanel"
+            aria-labelledby="gorantulanHunterAbility3-tab"
+          >
+            <p><strong>Ability 3:</strong> Heart of the Wild</p>
+            <p>
+              Temporarily boosts agility and senses, allowing precise strikes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3) Shrimp Monk (video left, tabs right) -->
+    <div class="row align-items-center mb-5">
+      <!-- Video on the left -->
+      <div class="col-md-4">
+        <video
+          class="img-fluid character-video"
+          src="assets/characters/shrimp-monk.webm"
+          autoplay
+          muted
+          loop
+          playsinline
+        >
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <!-- Tabs on the right -->
+      <div class="col-md-8">
+        <h2>Shrimp Monk</h2>
+        <ul class="nav nav-tabs" id="shrimpMonkTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="shrimpMonkBackground-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#shrimpMonkBackground"
+              type="button"
+              role="tab"
+              aria-controls="shrimpMonkBackground"
+              aria-selected="true"
+            >
+              Background
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="shrimpMonkAbility1-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#shrimpMonkAbility1"
+              type="button"
+              role="tab"
+              aria-controls="shrimpMonkAbility1"
+              aria-selected="false"
+            >
+              Ability 1
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="shrimpMonkAbility2-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#shrimpMonkAbility2"
+              type="button"
+              role="tab"
+              aria-controls="shrimpMonkAbility2"
+              aria-selected="false"
+            >
+              Ability 2
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="shrimpMonkAbility3-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#shrimpMonkAbility3"
+              type="button"
+              role="tab"
+              aria-controls="shrimpMonkAbility3"
+              aria-selected="false"
+            >
+              Ability 3
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content mt-3" id="shrimpMonkTabsContent">
+          <div
+            class="tab-pane fade show active"
+            id="shrimpMonkBackground"
+            role="tabpanel"
+            aria-labelledby="shrimpMonkBackground-tab"
+          >
+            <p><strong>Short Description:</strong> Greedy martial artist</p>
+            <p>Lorem ipsum dolor sit amet, Shrimp Monk’s deeper lore...</p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="shrimpMonkAbility1"
+            role="tabpanel"
+            aria-labelledby="shrimpMonkAbility1-tab"
+          >
+            <p><strong>Ability 1:</strong> Shell Kick</p>
+            <p>Unleashes a powerful kick reinforced by hardened shell chi.</p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="shrimpMonkAbility2"
+            role="tabpanel"
+            aria-labelledby="shrimpMonkAbility2-tab"
+          >
+            <p><strong>Ability 2:</strong> Greedy Grab</p>
+            <p>
+              Attempts to snatch valuables or siphon enemy energy mid-combat.
+            </p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="shrimpMonkAbility3"
+            role="tabpanel"
+            aria-labelledby="shrimpMonkAbility3-tab"
+          >
+            <p><strong>Ability 3:</strong> Tidal Palm</p>
+            <p>
+              Channels water chi for a massive palm strike, pushing foes away.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4) Bat Priest (video left, tabs right) -->
+    <div class="row align-items-center mb-5">
+      <!-- Video on the left -->
+      <div class="col-md-4">
+        <video
+          class="img-fluid character-video"
+          src="assets/characters/bat-priest.webm"
+          autoplay
+          muted
+          loop
+          playsinline
+        >
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <!-- Tabs on the right -->
+      <div class="col-md-8">
+        <h2>Bat Priest</h2>
+        <ul class="nav nav-tabs" id="batPriestTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="batPriestBackground-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#batPriestBackground"
+              type="button"
+              role="tab"
+              aria-controls="batPriestBackground"
+              aria-selected="true"
+            >
+              Background
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="batPriestAbility1-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#batPriestAbility1"
+              type="button"
+              role="tab"
+              aria-controls="batPriestAbility1"
+              aria-selected="false"
+            >
+              Ability 1
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="batPriestAbility2-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#batPriestAbility2"
+              type="button"
+              role="tab"
+              aria-controls="batPriestAbility2"
+              aria-selected="false"
+            >
+              Ability 2
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="batPriestAbility3-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#batPriestAbility3"
+              type="button"
+              role="tab"
+              aria-controls="batPriestAbility3"
+              aria-selected="false"
+            >
+              Ability 3
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content mt-3" id="batPriestTabsContent">
+          <div
+            class="tab-pane fade show active"
+            id="batPriestBackground"
+            role="tabpanel"
+            aria-labelledby="batPriestBackground-tab"
+          >
+            <p>
+              <strong>Short Description:</strong> Cunning priestess of the Dark
+              Lord
+            </p>
+            <p>Lorem ipsum dolor sit amet, Bat Priest’s deeper lore...</p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="batPriestAbility1"
+            role="tabpanel"
+            aria-labelledby="batPriestAbility1-tab"
+          >
+            <p><strong>Ability 1:</strong> Echolocation Burst</p>
+            <p>Releases a sonic wave, stunning enemies in its path.</p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="batPriestAbility2"
+            role="tabpanel"
+            aria-labelledby="batPriestAbility2-tab"
+          >
+            <p><strong>Ability 2:</strong> Dark Prayer</p>
+            <p>Channels forbidden magic to heal allies or harm foes.</p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="batPriestAbility3"
+            role="tabpanel"
+            aria-labelledby="batPriestAbility3-tab"
+          >
+            <p><strong>Ability 3:</strong> Winged Ascent</p>
+            <p>Temporarily takes flight, gaining high mobility and vantage.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5) Crypt Shambler (video left, tabs right) -->
+    <div class="row align-items-center mb-5">
+      <!-- Video on the left -->
+      <div class="col-md-4">
+        <video
+          class="img-fluid character-video"
+          src="assets/characters/crypt-shambler.webm"
+          autoplay
+          muted
+          loop
+          playsinline
+        >
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <!-- Tabs on the right -->
+      <div class="col-md-8">
+        <h2>Crypt Shambler</h2>
+        <ul class="nav nav-tabs" id="cryptShamblerTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="cryptShamblerBackground-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#cryptShamblerBackground"
+              type="button"
+              role="tab"
+              aria-controls="cryptShamblerBackground"
+              aria-selected="true"
+            >
+              Background
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="cryptShamblerAbility1-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#cryptShamblerAbility1"
+              type="button"
+              role="tab"
+              aria-controls="cryptShamblerAbility1"
+              aria-selected="false"
+            >
+              Ability 1
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="cryptShamblerAbility2-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#cryptShamblerAbility2"
+              type="button"
+              role="tab"
+              aria-controls="cryptShamblerAbility2"
+              aria-selected="false"
+            >
+              Ability 2
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="cryptShamblerAbility3-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#cryptShamblerAbility3"
+              type="button"
+              role="tab"
+              aria-controls="cryptShamblerAbility3"
+              aria-selected="false"
+            >
+              Ability 3
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content mt-3" id="cryptShamblerTabsContent">
+          <div
+            class="tab-pane fade show active"
+            id="cryptShamblerBackground"
+            role="tabpanel"
+            aria-labelledby="cryptShamblerBackground-tab"
+          >
+            <p>
+              <strong>Short Description:</strong> Mechanical construct overtaken
+              by madness
+            </p>
+            <p>Lorem ipsum dolor sit amet, Crypt Shambler’s deeper lore...</p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="cryptShamblerAbility1"
+            role="tabpanel"
+            aria-labelledby="cryptShamblerAbility1-tab"
+          >
+            <p><strong>Ability 1:</strong> Rusted Slash</p>
+            <p>A decaying blade that inflicts lingering damage over time.</p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="cryptShamblerAbility2"
+            role="tabpanel"
+            aria-labelledby="cryptShamblerAbility2-tab"
+          >
+            <p><strong>Ability 2:</strong> Unholy Gears</p>
+            <p>
+              Temporarily overclocks its mechanical limbs for rapid strikes.
+            </p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="cryptShamblerAbility3"
+            role="tabpanel"
+            aria-labelledby="cryptShamblerAbility3-tab"
+          >
+            <p><strong>Ability 3:</strong> Necro Pulse</p>
+            <p>Emits a wave of dark energy that reanimates nearby corpses.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6) Cartographer (video left, tabs right) -->
+    <div class="row align-items-center mb-5">
+      <!-- Video on the left -->
+      <div class="col-md-4">
+        <video
+          class="img-fluid character-video"
+          src="assets/characters/cartographer.webm"
+          autoplay
+          muted
+          loop
+          playsinline
+        >
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <!-- Tabs on the right -->
+      <div class="col-md-8">
+        <h2>Cartographer</h2>
+        <ul class="nav nav-tabs" id="cartographerTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="cartographerBackground-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#cartographerBackground"
+              type="button"
+              role="tab"
+              aria-controls="cartographerBackground"
+              aria-selected="true"
+            >
+              Background
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="cartographerAbility1-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#cartographerAbility1"
+              type="button"
+              role="tab"
+              aria-controls="cartographerAbility1"
+              aria-selected="false"
+            >
+              Ability 1
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="cartographerAbility2-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#cartographerAbility2"
+              type="button"
+              role="tab"
+              aria-controls="cartographerAbility2"
+              aria-selected="false"
+            >
+              Ability 2
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="cartographerAbility3-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#cartographerAbility3"
+              type="button"
+              role="tab"
+              aria-controls="cartographerAbility3"
+              aria-selected="false"
+            >
+              Ability 3
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content mt-3" id="cartographerTabsContent">
+          <div
+            class="tab-pane fade show active"
+            id="cartographerBackground"
+            role="tabpanel"
+            aria-labelledby="cartographerBackground-tab"
+          >
+            <p>
+              <strong>Short Description:</strong> Bizarre artist that travels
+              the world and captures its beauty on paper
+            </p>
+            <p>Lorem ipsum dolor sit amet, Cartographer’s deeper lore...</p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="cartographerAbility1"
+            role="tabpanel"
+            aria-labelledby="cartographerAbility1-tab"
+          >
+            <p><strong>Ability 1:</strong> Ink Splash</p>
+            <p>Throws magical ink that blinds enemies temporarily.</p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="cartographerAbility2"
+            role="tabpanel"
+            aria-labelledby="cartographerAbility2-tab"
+          >
+            <p><strong>Ability 2:</strong> Sketch Portal</p>
+            <p>
+              Draws a temporary portal on the battlefield for quick
+              repositioning.
+            </p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="cartographerAbility3"
+            role="tabpanel"
+            aria-labelledby="cartographerAbility3-tab"
+          >
+            <p><strong>Ability 3:</strong> World Canvas</p>
+            <p>
+              Summons illusions of distant lands to confuse and distract foes.
+            </p>
           </div>
         </div>
       </div>
