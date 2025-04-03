@@ -147,7 +147,6 @@
   color: #ffaa4d;
   border-bottom: 1px dotted #ffaa4d;
 }
-
 .card-frame.cold-element .tooltip-word {
   color: #80dfff;
   border-bottom: 1px dotted #80dfff;
@@ -157,6 +156,15 @@
   font-weight: 600;
   cursor: help;
   transition: color 0.2s;
+}
+/* Fire */
+.card-frame.fire-element .card-damage {
+  background-color: #ff5c33; /* Match --card-color or fire tone */
+}
+
+/* Cold */
+.card-frame.cold-element .card-damage {
+  background-color: #00bfff; /* Match --card-color or cold tone */
 }
 
 .card-description em {
