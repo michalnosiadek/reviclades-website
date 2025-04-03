@@ -1,1 +1,138 @@
-<p>card-library-page works!</p>
+<div class="card-library-wrapper">
+  <div class="card-library">
+    <!-- FIRE CARD -->
+    <div class="card-frame fire-element">
+      <div class="card-header">
+        <div
+          class="card-cost"
+          data-bs-toggle="tooltip"
+          data-bs-title="Action Points fully regenerate each round."
+        >
+          AP 4
+        </div>
+        <div class="card-name">Square of Fire</div>
+      </div>
+
+      <div class="card-image">
+        <video autoplay muted loop playsinline class="card-video">
+          <source src="assets/abilities/square-of-fire.MP4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="card-description">
+        <p>
+          Creates a burning square of obstacles around the user.
+          <br /><br />
+          While inside it, the user
+          <span class="tooltip-word-strong"> Deals Double Damage </span>
+          and
+          <span
+            class="tooltip-word"
+            data-bs-toggle="tooltip"
+            data-bs-title="Push: Moves target X tiles. Stops on collision."
+          >
+            Push
+          </span>
+          enemies 3 tiles in a straight line.
+          <br /><br />
+          Enemies at the start of their turn near the square take
+          <span
+            class="tooltip-word"
+            data-bs-toggle="tooltip"
+            data-bs-title="Fire deals bonus damage to Earth enemies."
+          >
+            Fire 4 Damage </span
+          >.
+        </p>
+        <em>Lasts 2 rounds.</em>
+      </div>
+
+      <div class="card-footer">
+        <div
+          class="card-damage"
+          data-bs-toggle="tooltip"
+          data-bs-title="Fire deals bonus damage to Earth enemies."
+        >
+          4 Fire Damage
+        </div>
+        <div
+          class="card-effect"
+          data-bs-toggle="tooltip"
+          data-bs-title="Push moves enemies and can cause collision damage."
+        >
+          Push
+        </div>
+      </div>
+    </div>
+
+    <!-- COLD CARD -->
+    <div class="card-frame cold-element">
+      <div class="card-header">
+        <div
+          class="card-cost"
+          data-bs-toggle="tooltip"
+          data-bs-title="Action Points fully regenerate each round."
+        >
+          AP 2
+        </div>
+        <div class="card-name">Misty Ice Trap</div>
+      </div>
+
+      <div class="card-image">
+        <video autoplay muted loop playsinline class="card-video">
+          <source src="assets/abilities/misty-ice-trap.MP4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="card-description">
+        <p>
+          Creates an
+          <span
+            class="tooltip-word"
+            data-bs-toggle="tooltip"
+            data-bs-title="Invisible to enemies."
+          >
+            Invisible
+          </span>
+          trap that deals
+          <span
+            class="tooltip-word"
+            data-bs-toggle="tooltip"
+            data-bs-title="Cold deals bonus damage to Fire enemies."
+          >
+            8 Cold Damage
+          </span>
+          and
+          <span
+            class="tooltip-word"
+            data-bs-toggle="tooltip"
+            data-bs-title="Frozen units skip their turns."
+          >
+            Freezes
+          </span>
+          enemies for 2 turns when triggered.
+        </p>
+        <em>Lasts until activated.</em>
+      </div>
+
+      <div class="card-footer">
+        <div
+          class="card-damage"
+          data-bs-toggle="tooltip"
+          data-bs-title="Cold deals bonus damage to Fire enemies."
+        >
+          8 Cold Damage
+        </div>
+        <div
+          class="card-effect"
+          data-bs-toggle="tooltip"
+          data-bs-title="Freeze prevents action for 2 turns."
+        >
+          Freeze
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

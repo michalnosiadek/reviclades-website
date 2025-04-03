@@ -28,6 +28,19 @@
   --discord: #5865f2;
 
   --overlay: #14191e;
+
+  --card-text-size: clamp(12px, 1.1vw, 16px);
+  --card-header-size: clamp(16px, 1.2vw, 22px);
+
+  --fire-color: #ffaa4d;
+  --cold-color: #80dfff;
+  --earth-color: #bdaa7a;
+  --wind-color: #a0ffe6;
+  --light-color: #fef3b0;
+  --dark-color: #af7de7;
+
+  --tooltip-fire-border: 1px dotted var(--fire-color);
+  --tooltip-cold-border: 1px dotted var(--cold-color);
 }
 
 * {
@@ -198,4 +211,10 @@ h1 {
   max-width: 300px; /* Adjust as desired */
   width: 100%;
   height: auto;
+}
+.character-video-natural {
+  max-width: 300px; /* Adjust as desired */
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }

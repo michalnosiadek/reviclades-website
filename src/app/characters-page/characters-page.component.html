@@ -1,324 +1,492 @@
 <section class="revi-page-dark-background">
-  <div class="container py-5">
-    <!-- 1) Fire Berserker (video left, tabs right) -->
-    <div class="row align-items-center mb-5">
-      <!-- Video on the left -->
-      <div class="col-md-4">
-        <video
-          class="img-fluid character-video"
-          src="assets/characters/fire-berserker.webm"
-          autoplay
-          muted
-          loop
-          playsinline
-        >
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <!-- Tabs on the right -->
-      <div class="col-md-8">
-        <h2>Fire Berserker</h2>
-        <!-- <h3>Forgotten Ruthless Warrior</h3> -->
-        <p>
-          <strong>Forgotten Ruthless Warrior</strong>
-        </p>
-        <ul class="nav nav-tabs" id="fireBerserkerTabs" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link active"
-              id="fireBerserkerBackground-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#fireBerserkerBackground"
-              type="button"
-              role="tab"
-              aria-controls="fireBerserkerBackground"
-              aria-selected="true"
+  <section class="character-section fire-section fire-berserker-section">
+    <div class="overlay">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <!-- Video Column -->
+          <div class="col-md-4 text-center">
+            <video
+              class="character-video-natural"
+              autoplay
+              muted
+              loop
+              playsinline
             >
-              Background
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="fireBerserkerAbility1-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#fireBerserkerAbility1"
-              type="button"
-              role="tab"
-              aria-controls="fireBerserkerAbility1"
-              aria-selected="false"
-            >
-              Burning Last Words
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="fireBerserkerAbility2-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#fireBerserkerAbility2"
-              type="button"
-              role="tab"
-              aria-controls="fireBerserkerAbility2"
-              aria-selected="false"
-            >
-              Magma Swing
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="fireBerserkerAbility3-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#fireBerserkerAbility3"
-              type="button"
-              role="tab"
-              aria-controls="fireBerserkerAbility3"
-              aria-selected="false"
-            >
-              Square of Fire
-            </button>
-          </li>
-        </ul>
-        <div class="tab-content mt-3" id="fireBerserkerTabsContent">
-          <div
-            class="tab-pane fade show active"
-            id="fireBerserkerBackground"
-            role="tabpanel"
-            aria-labelledby="fireBerserkerBackground-tab"
-          >
-            <p>
-              As an old fire warrior from the ancient time of elementals,
-              <strong>Hector</strong> does not follow the new age religion of
-              fire. Even though his memory is foggy, remembering teaching of his
-              god, Hector wanders the fire wastelands alone, challenging any
-              worthy opponent.
-            </p>
-            <p>
-              With his pride of a true soldier, he never attacks creatures
-              unwilling of fight. At times he helps travelers and merchants in
-              trouble. Gloomy without a fight, showing that time took a toll on
-              him, yet still glowing like a bright wildfire when battle begins.
-            </p>
+              <source
+                src="assets/characters/fire-berserker.webm"
+                type="video/webm"
+              />
+            </video>
           </div>
-          <div
-            class="tab-pane fade only-image"
-            id="fireBerserkerAbility1"
-            role="tabpanel"
-            aria-labelledby="fireBerserkerAbility1-tab"
-          >
-            <div class="row align-items-center">
-              <!-- Text on the Left -->
-              <div class="col-md-7">
+
+          <!-- Tabs and Content Column -->
+          <div class="col-md-8">
+            <h2 class="character-name">Fire Berserker</h2>
+            <p class="character-title">
+              <strong>Forgotten Ruthless Warrior</strong>
+            </p>
+
+            <!-- Tabs -->
+            <ul class="nav nav-tabs character-tabs fire-tabs" role="tablist">
+              <li class="nav-item">
+                <button
+                  class="nav-link active"
+                  data-bs-toggle="tab"
+                  data-bs-target="#fire-bg"
+                >
+                  Background
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#fire-ability1"
+                  (click)="onTabChange('fireBerserker', 1)"
+                >
+                  Burning Last Words
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#fire-ability2"
+                  (click)="onTabChange('fireBerserker', 2)"
+                >
+                  Magma Swing
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#fire-ability3"
+                  (click)="onTabChange('fireBerserker', 3)"
+                >
+                  Square of Fire
+                </button>
+              </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content character-tab-content fire-element">
+              <div class="tab-pane active" id="fire-bg">
                 <p>
-                  As the Fire Elemental’s strength wanes and its soul flickers
-                  out, it erupts in a final, wrathful blaze. The lingering
-                  embers of its essence ignite in a searing explosion, engulfing
-                  everything within the blast radius in purging flames.
+                  As an old fire warrior from the ancient time of elementals,
+                  <strong>Hector</strong> does not follow the new age religion
+                  of fire. Even though his memory is foggy, remembering teaching
+                  of his god, Hector wanders the fire wastelands alone,
+                  challenging any worthy opponent.
+                </p>
+                <p>
+                  With his pride of a true soldier, he never attacks creatures
+                  unwilling of fight. At times he helps travelers and merchants
+                  in trouble. Gloomy without a fight, showing that time took a
+                  toll on him, yet still glowing like a bright wildfire when
+                  battle begins.
                 </p>
               </div>
 
-              <!-- Video on the Right -->
-              <div class="col-md-5 text-end">
-                <video
-                  class="img-fluid character-video"
-                  src="assets/abilities/burning-last-words.MP4"
-                  autoplay
-                  muted
-                  loop
-                  playsinline
-                >
-                  Your browser does not support the video tag.
-                </video>
+              <div class="tab-pane" id="fire-ability1">
+                <div class="row align-items-center">
+                  <div class="col-md-7">
+                    <p>
+                      This ability is a
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Passive: Triggers automatically under specific conditions."
+                      >
+                        Passive
+                      </span>
+                      effect that triggers upon the user’s death.
+                      <br /><br />
+                      When the character dies, they Explode in a fiery burst
+                      that deals
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Fire deals bonus damage to Earth enemies."
+                      >
+                        15 Fire Damage
+                      </span>
+                      to all nearby non-fire characters.
+                    </p>
+                    <em>Even in death, the fiery wrath persists.</em>
+                  </div>
+                  <div class="col-md-5 text-end">
+                    <video
+                      *ngIf="selectedTabs['fireBerserker'] === 1"
+                      class="character-video fire-element"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                    >
+                      <source
+                        src="assets/abilities/burning-last-words.MP4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+              <div class="tab-pane" id="fire-ability2">
+                <div class="row align-items-center">
+                  <div class="col-md-7">
+                    <p>
+                      With a roar of fury, the Berserker swings his molten
+                      weapon in a wide arc.
+                      <br /><br />
+                      All enemies standing on
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Adjacent tiles: enemies directly next to the user."
+                      >
+                        adjacent tiles
+                      </span>
+                      are hit by a crushing
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Fire deals bonus damage to Earth enemies."
+                      >
+                        5 Fire Damage
+                      </span>
+                      as scorching heat and muscle collide.
+                    </p>
+                    <em>Sometimes brute force is the best way around.</em>
+                  </div>
+                  <div class="col-md-5 text-end">
+                    <video
+                      class="character-video fire-element"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      *ngIf="selectedTabs['fireBerserker'] === 2"
+                    >
+                      <source
+                        src="assets/abilities/flame-swing.MP4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+              </div>
 
-          <div
-            class="tab-pane fade"
-            id="fireBerserkerAbility2"
-            role="tabpanel"
-            aria-labelledby="fireBerserkerAbility2-tab"
-          >
-            <div class="row align-items-center">
-              <!-- Description on the left -->
-              <div class="col-md-7">
-                <p>
-                  With a mighty, ground-shattering swing, the Fire Berserker
-                  unleashes a surge of molten fury, striking all enemies in his
-                  vicinity. Those caught in the attack feel the raw power of an
-                  ancient warrior whose wrath burns hotter than the core of the
-                  earth itself.
-                </p>
-              </div>
-              <!-- Video on the right -->
-              <div class="col-md-5">
-                <video
-                  class="img-fluid character-video"
-                  src="assets/abilities/magma-swing-ingame.mp4"
-                  autoplay
-                  muted
-                  loop
-                  playsinline
-                >
-                  Your browser does not support the video tag.
-                </video>
+              <div class="tab-pane" id="fire-ability3">
+                <div class="row align-items-center">
+                  <div class="col-md-7">
+                    <p>
+                      Creates a burning square of obstacles around the user.
+                      <br /><br />
+                      While inside it, the user
+                      <span class="tooltip-word-strong"
+                        >Deals Double Damage</span
+                      >
+                      and
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Push: Moves target X tiles. Stops on collision."
+                      >
+                        Push
+                      </span>
+                      enemies 3 tiles in a straight line.
+                      <br /><br />
+                      Enemies at the start of their turn near the square take
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Fire deals bonus damage to Earth enemies."
+                      >
+                        Fire 4 Damage </span
+                      >.
+                    </p>
+                    <em>Where the flames rise, only ash remains.</em>
+                  </div>
+                  <div class="col-md-5 text-end">
+                    <video
+                      class="character-video fire-element"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      *ngIf="selectedTabs['fireBerserker'] === 3"
+                    >
+                      <source
+                        src="assets/abilities/square-of-fire.MP4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
               </div>
             </div>
+            <!-- end tab-content -->
           </div>
-          <div
-            class="tab-pane fade"
-            id="fireBerserkerAbility3"
-            role="tabpanel"
-            aria-labelledby="fireBerserkerAbility3-tab"
-          >
-            <div class="d-flex justify-content-center">
-              <video
-                class="img-fluid character-video"
-                src="assets/abilities/square-of-fire-card.mp4"
-                autoplay
-                muted
-                loop
-                playsinline
-              >
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
+          <!-- end col-md-8 -->
         </div>
+        <!-- end row -->
       </div>
+      <!-- end container -->
     </div>
+    <!-- end overlay -->
+  </section>
+  <section
+    class="character-section gorantulan-hunter-section cold-element earth-section"
+  >
+    <div class="overlay">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <!-- Video Column -->
+          <div class="col-md-4 text-center">
+            <video
+              class="character-video-natural"
+              autoplay
+              muted
+              loop
+              playsinline
+            >
+              <source
+                src="assets/characters/gorantulan-hunter.webm"
+                type="video/webm"
+              />
+            </video>
+          </div>
+
+          <!-- Tabs and Content Column -->
+          <div class="col-md-8">
+            <h2 class="character-name">Gorantulan Hunter</h2>
+            <p class="character-title">
+              <strong>Pure-hearted Guardian of the Frostlands</strong>
+            </p>
+
+            <!-- Tabs -->
+            <ul class="nav nav-tabs character-tabs cold-tabs" role="tablist">
+              <li class="nav-item">
+                <button
+                  class="nav-link active"
+                  data-bs-toggle="tab"
+                  data-bs-target="#cold-bg"
+                >
+                  Background
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#cold-ability1"
+                  (click)="onTabChange('gorantulanHunter', 1)"
+                >
+                  Misty Ice Trap
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#cold-ability2"
+                  (click)="onTabChange('gorantulanHunter', 2)"
+                >
+                  Headshot
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#cold-ability3"
+                  (click)="onTabChange('gorantulanHunter', 3)"
+                >
+                  Camouflage Dash
+                </button>
+              </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content character-tab-content cold-element">
+              <!-- Background -->
+              <div class="tab-pane active" id="cold-bg">
+                <p>
+                  <strong>Banzai</strong> of the Bazula bloodline is a sworn
+                  protector of the icy wilderness. Raised in frozen barracks and
+                  trained in ambush warfare, he vowed to defend the Gorantulan
+                  wilds with honor.
+                </p>
+                <p>
+                  “I, Huntsman Banzai, pledge to shield this land until my final
+                  breath. The winds may howl, and the ice may crack, but the
+                  hunt never ends.” ~ From the Hunter’s Oath
+                </p>
+              </div>
+
+              <!-- Misty Ice Trap -->
+              <div class="tab-pane" id="cold-ability1">
+                <div class="row align-items-center">
+                  <div class="col-md-7">
+                    <p>
+                      Places an invisible trap beneath the snow near the user.
+                      <br /><br />
+                      When an enemy steps on it, it triggers a blast of
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Cold weakens enemies and counters Fire effects."
+                      >
+                        Cold Magic
+                      </span>
+                      dealing
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Cold deals bonus damage to Fire enemies."
+                      >
+                        4 Cold Damage
+                      </span>
+                      and
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Frozen characters cannot move or attack for a set duration."
+                      >
+                        Freezing
+                      </span>
+                      the target for 2 rounds.
+                    </p>
+                    <em>As silent as falling snow — and just as deadly.</em>
+                  </div>
+                  <div class="col-md-5 text-end">
+                    <video
+                      class="character-video cold-element"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      *ngIf="selectedTabs['gorantulanHunter'] === 1"
+                    >
+                      <source
+                        src="assets/abilities/misty-ice-trap.MP4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Headshot -->
+              <div class="tab-pane" id="cold-ability2">
+                <div class="row align-items-center">
+                  <div class="col-md-7">
+                    <p>
+                      This attack requires two turns to execute.
+                      <br /><br />
+                      <span class="tooltip-word-strong">Turn 1:</span> Enter a
+                      focused stance, locking onto your target. <br /><br />
+                      <span class="tooltip-word-strong">Turn 2:</span> If the
+                      enemy remains visible and you haven’t moved or been
+                      harmed, unleash a
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Deals critical damage when uninterrupted."
+                      >
+                        precise headshot
+                      </span>
+                      dealing
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Cold deals bonus damage to Fire enemies."
+                      >
+                        8 Cold Damage </span
+                      >.
+                    </p>
+                    <em>Stillness is the price of power.</em>
+                  </div>
+                  <div class="col-md-5 text-end">
+                    <video
+                      class="character-video cold-element"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      *ngIf="selectedTabs['gorantulanHunter'] === 2"
+                    >
+                      <source
+                        src="assets/abilities/headshot.MP4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Camouflage Dash -->
+              <div class="tab-pane" id="cold-ability3">
+                <div class="row align-items-center">
+                  <div class="col-md-7">
+                    <p>
+                      Instantly blend into the environment, becoming
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Invisible: Cannot be targeted until the next turn."
+                      >
+                        Invisible
+                      </span>
+                      and dashing up to 5 tiles.
+                      <br /><br />
+                      Ends your turn, but enemies cannot
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Targeting: Enemies cannot directly attack or affect invisible units."
+                      >
+                        target
+                      </span>
+                      you until the next round.
+                    </p>
+                    <em>A flicker in the wind — now gone.</em>
+                  </div>
+                  <div class="col-md-5 text-end">
+                    <video
+                      class="character-video cold-element"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      *ngIf="selectedTabs['gorantulanHunter'] === 3"
+                    >
+                      <source
+                        src="assets/abilities/camuflage-dash.MP4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end tab-content -->
+          </div>
+          <!-- end col-md-8 -->
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+    </div>
+    <!-- end overlay -->
+  </section>
+
+  <div *ngIf="development" class="container py-5">
+    <!-- 1) Fire Berserker (video left, tabs right) -->
+    <!-- end character section -->
 
     <!-- 2) Gorantulan Hunter (video left, tabs right) -->
-    <div class="row align-items-center mb-5">
-      <!-- Video on the left -->
-      <div class="col-md-4">
-        <video
-          class="img-fluid character-video"
-          src="assets/characters/gorantulan-hunter.webm"
-          autoplay
-          muted
-          loop
-          playsinline
-        >
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <!-- Tabs on the right -->
-      <div class="col-md-8">
-        <h2>Gorantulan Hunter</h2>
-        <p>
-          <strong>Pure-hearted Hunter of the Gorantulans</strong>
-        </p>
-        <ul class="nav nav-tabs" id="gorantulanHunterTabs" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link active"
-              id="gorantulanHunterBackground-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#gorantulanHunterBackground"
-              type="button"
-              role="tab"
-              aria-controls="gorantulanHunterBackground"
-              aria-selected="true"
-            >
-              Background
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="gorantulanHunterAbility1-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#gorantulanHunterAbility1"
-              type="button"
-              role="tab"
-              aria-controls="gorantulanHunterAbility1"
-              aria-selected="false"
-            >
-              Misty Ice Trap
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="gorantulanHunterAbility2-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#gorantulanHunterAbility2"
-              type="button"
-              role="tab"
-              aria-controls="gorantulanHunterAbility2"
-              aria-selected="false"
-            >
-              Headshot
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="gorantulanHunterAbility3-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#gorantulanHunterAbility3"
-              type="button"
-              role="tab"
-              aria-controls="gorantulanHunterAbility3"
-              aria-selected="false"
-            >
-              Spider Web
-            </button>
-          </li>
-        </ul>
-        <div class="tab-content mt-3" id="gorantulanHunterTabsContent">
-          <div
-            class="tab-pane fade show active"
-            id="gorantulanHunterBackground"
-            role="tabpanel"
-            aria-labelledby="gorantulanHunterBackground-tab"
-          >
-            <p>
-              As a young adult from the Bazula family of mighty hunters, Banzai
-              was trained from an early stage of his live to guard Gorantulan’s
-              home.
-            </p>
-            <p>
-              „I, Huntsman Banzai, promise to always defend Gorantuland land and
-              its people from dangers. With might of all predecessors I will
-              cherish this land. Since I am a hunter, my hunt will be over only
-              after my death.” ~ Part of Banazai’s Hunter Oath
-            </p>
-          </div>
-          <div
-            class="tab-pane fade"
-            id="gorantulanHunterAbility1"
-            role="tabpanel"
-            aria-labelledby="gorantulanHunterAbility1-tab"
-          >
-            <p><strong>Ability 1:</strong> Jungle Snare</p>
-            <p>Sets a hidden trap that immobilizes unwary foes.</p>
-          </div>
-          <div
-            class="tab-pane fade"
-            id="gorantulanHunterAbility2"
-            role="tabpanel"
-            aria-labelledby="gorantulanHunterAbility2-tab"
-          >
-            <p><strong>Ability 2:</strong> Beastly Bond</p>
-            <p>Summons a Gorantulan companion to assist in battle.</p>
-          </div>
-          <div
-            class="tab-pane fade"
-            id="gorantulanHunterAbility3"
-            role="tabpanel"
-            aria-labelledby="gorantulanHunterAbility3-tab"
-          >
-            <p><strong>Ability 3:</strong> Heart of the Wild</p>
-            <p>
-              Temporarily boosts agility and senses, allowing precise strikes.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- 3) Shrimp Monk (video left, tabs right) -->
     <div class="row align-items-center mb-5">

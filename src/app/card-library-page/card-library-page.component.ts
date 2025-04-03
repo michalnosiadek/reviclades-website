@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 
 @Component({
   selector: 'app-card-library-page',
   templateUrl: './card-library-page.component.html',
-  styleUrls: ['./card-library-page.component.css']
+  styleUrls: ['./card-library-page.component.css'],
 })
-export class CardLibraryPageComponent {
-
+export class CardLibraryPageComponent implements AfterViewInit {
+  ngAfterViewInit() {
+    const tooltipTriggerList = document.querySelectorAll(
+      '[data-bs-toggle="tooltip"]'
+    );
+    // Ensure bootstrap is available globally
+    tooltipTriggerList.forEach(
+      (el) => new (window as any).bootstrap.Tooltip(el)
+    );
+  }
 }
