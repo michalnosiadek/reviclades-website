@@ -160,11 +160,13 @@
 /* Fire */
 .card-frame.fire-element .card-damage {
   background-color: #ff5c33; /* Match --card-color or fire tone */
+  color: black;
 }
 
 /* Cold */
 .card-frame.cold-element .card-damage {
   background-color: #00bfff; /* Match --card-color or cold tone */
+  color: black;
 }
 
 .card-description em {
