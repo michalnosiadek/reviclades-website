@@ -1,9 +1,10 @@
 import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-world-map-page',
-  templateUrl: './world-map-page.component.html',
-  styleUrls: ['./world-map-page.component.css'],
+    selector: 'app-world-map-page',
+    templateUrl: './world-map-page.component.html',
+    styleUrls: ['./world-map-page.component.css'],
+    standalone: false
 })
 export class WorldMapPageComponent {
   @ViewChild('mySidebarLeft') mySidebarLeft!: ElementRef;

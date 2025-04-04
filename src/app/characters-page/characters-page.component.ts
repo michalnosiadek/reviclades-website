@@ -1,9 +1,10 @@
 import { AfterViewInit, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-characters-page',
-  templateUrl: './characters-page.component.html',
-  styleUrls: ['./characters-page.component.css'],
+    selector: 'app-characters-page',
+    templateUrl: './characters-page.component.html',
+    styleUrls: ['./characters-page.component.css'],
+    standalone: false
 })
 export class CharactersPageComponent implements AfterViewInit {
   development: boolean = false;
