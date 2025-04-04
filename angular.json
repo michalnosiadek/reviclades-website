@@ -54,12 +54,12 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "reviclades-angular-app:build:production",
-              "liveReload": true
+              "liveReload": true,
+              "buildTarget": "reviclades-angular-app:build:production"
             },
             "development": {
-              "browserTarget": "reviclades-angular-app:build:development",
-              "liveReload": true
+              "liveReload": true,
+              "buildTarget": "reviclades-angular-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -67,7 +67,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "reviclades-angular-app:build"
+            "buildTarget": "reviclades-angular-app:build"
           }
         },
         "test": {
