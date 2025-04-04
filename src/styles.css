@@ -90,19 +90,19 @@ p {
 }
 
 .hero-2 {
-  background: url("assets/stronka/revi-westfall.webp ") center/cover no-repeat;
+  background: url("assets/stronka/revi-westfall.webp") center/cover no-repeat;
   min-height: 100vh;
   display: flex;
 }
 
 .hero-3 {
-  background: url("assets/stronka/arena-light.webp ") center/cover no-repeat;
+  background: url("assets/stronka/arena-light.webp") center/cover no-repeat;
   min-height: 100vh;
   display: flex;
 }
 
 .hero-4 {
-  background: url("assets/stronka/clouds.webp ") center/cover no-repeat;
+  background: url("assets/stronka/clouds.webp") center/cover no-repeat;
   min-height: 100vh;
   display: flex;
 }
