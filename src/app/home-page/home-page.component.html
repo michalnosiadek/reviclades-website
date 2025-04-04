@@ -1,198 +1,45 @@
-<div class="hero d-flex align-items-center justify-content-center g-start-2">
-  <div class="row">
-    <div
-      class="container my-5 bg-body-tertiary text-center background-rough"
-      style="--bs-bg-opacity: 0.65; max-width: 85vw"
-    >
+<div class="hero d-flex align-items-center py-5 position-relative">
+  <!-- Stylish blurred bar background -->
+  <div class="hero-blur-bar"></div>
+
+  <!-- Content -->
+  <div
+    class="container d-flex flex-column flex-lg-row justify-content-between align-items-center position-relative z-2"
+  >
+    <div class="hero-left-content p-4 text-center text-lg-start">
+      <!-- World tagline -->
+
+      <!-- Game title and genre -->
+      <h1 class="fw-bold display-4">REVICLADES</h1>
+      <h2 class="mb-4 fs-4 text-uppercase">Multiplayer Card Game</h2>
+
+      <!-- Feature hook -->
+      <p class="hero-subtitle mb-3">
+        Tactical, turn-based arena where
+        <span class="highlight">every card is a weapon</span>,
+        <span class="highlight">every move a mind game</span>, and
+        <span class="highlight">only the sharpest strategies survive</span>.
+      </p>
+
+      <!-- CTA -->
+      <p class="hero-cta">Join our alpha to shape the future!</p>
       <div
-        class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg"
+        class="mt-4 d-flex justify-content-center justify-content-lg-start gap-3"
       >
-        <div class="col-lg">
-          <h1 class="display-4 fw-bold lh-1p">Join the Arena!</h1>
-          <p>
-            Become the greatest strategist of the Reviclades,
-            <b>isometric turn-based strategic arena game</b> where sharp mind is
-            stronger than a sharp sword.
-          </p>
-        </div>
-        <p>Join our alpha to become a part of the community!</p>
-        <a
-          href="https://discord.gg/XTWVfJrjQw"
-          target="_blank"
-          rel="noopener noreferrer"
+        <a href="https://discord.gg/XTWVfJrjQw" class="btn btn-discord"
+          >Discord</a
         >
-          <button
-            type="button"
-            class="btn btn-discord btn-lg px-4 gap-3 mb-4"
-            href="https://discord.gg/XTWVfJrjQw"
-          >
-            Join Discord!
-          </button>
-        </a>
+        <a routerLink="/signup" class="btn btn-warning">Sign Up</a>
       </div>
     </div>
 
-    <div class="d-flex justify-content-center align-items-center"></div>
-  </div>
-</div>
-
-<div class="hero-2 d-flex align-items-center justify-content-center">
-  <div
-    class="container my-5 bg-body-tertiary background-rough"
-    style="--bs-bg-opacity: 0.65"
-  >
-    <div
-      class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg"
-    >
-      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-        <h1 class="display-4 fw-bold lh-1 text-body-emphasis">
-          Explore the World
-        </h1>
-        <li>Rich history</li>
-        <li>Hundreds of unique races</li>
-        <li>Seven major factions and many minor groups that influence story</li>
-        <li>Beautiful lands with dark mysteries</li>
-        <li>Mighty heroes and merciless villains</li>
-        <h4 class="mt-2">
-          Choose your own way to interact with the Reviclades universe
-        </h4>
-        <div
-          class="d-grid gap-2 d-md-flex justify-content-md-start mt-4 mb-4 mb-lg-3"
-        >
-          <button
-            type="button"
-            routerLink="/world-map"
-            class="btn btn-revi btn-warning btn-lg px-4 me-md-2"
-          >
-            World Map
-          </button>
-          <button
-            type="button"
-            routerLink="/characters"
-            class="btn btn-revi btn-warning btn-lg px-4 me-md-2"
-          >
-            Characters
-          </button>
-          <button
-            type="button"
-            routerLink="/factions"
-            class="btn btn-revi btn-warning btn-lg px-4 me-md-2"
-          >
-            Factions
-          </button>
-        </div>
-      </div>
-      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-        <img
-          class="rounded-lg-3"
-          src="assets/Stronka/city-proper.png"
-          alt=""
-          width=""
-          height="500px"
-        />
-      </div>
+    <!-- Screenshot -->
+    <div class="hero-screenshot mt-5 mt-lg-0">
+      <img
+        src="assets/images/hero-section.jpg"
+        class="img-fluid rounded shadow-lg"
+        alt="Game screenshot"
+      />
     </div>
   </div>
 </div>
-
-<div class="hero-3 d-flex align-items-center justify-content-center">
-  <div
-    class="container my-5 bg-body-tertiary background-rough"
-    style="--bs-bg-opacity: 0.65"
-  >
-    <div
-      class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg"
-    >
-      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden">
-        <img
-          class="rounded-lg-3"
-          src="assets/Stronka/arena-outside.webp"
-          alt=""
-          width=""
-          height="500"
-        />
-      </div>
-      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-        <h1 class="display-4 fw-bold lh-1 text-body-emphasis">
-          Reviclades Team
-        </h1>
-        <p>
-          Team is filled with passionate people who love to create and have fun
-          while doing it. We hope to create Reviclades with all the players,
-          because only wityh communication we can create something great.
-        </p>
-        <div
-          class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3"
-        >
-          <button
-            type="button"
-            routerLink="/roadmap"
-            class="btn btn-revi btn-warning btn-lg px-4 me-md-2"
-          >
-            Roadmap
-          </button>
-          <button
-            type="button"
-            routerLink="/about"
-            class="btn btn-revi btn-warning btn-lg px-4 me-md-2"
-          >
-            About us
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="hero-4 d-flex align-items-center justify-content-center">
-  <div
-    class="container my-5 bg-body-tertiary background-rough"
-    style="--bs-bg-opacity: 0.65"
-  >
-    <div
-      class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg"
-    >
-      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-        <h1 class="display-4 fw-bold lh-1 text-body-emphasis">
-          Which faction are you?
-        </h1>
-        <p>
-          Are you ready to embark on a journey through a fantastical world and
-          discover which faction you truly belong to? Our unique quiz is
-          designed to guide you through a series of intriguing scenarios, each
-          one revealing a little more about your innermost traits and
-          inclinations. Your choices will determine your alignment with one of
-          the diverse factions in our fantasy game universe.
-        </p>
-        <div
-          class="d-grid gap-2 d-md-flex justify-content-md-start mt-4 mb-4 mb-lg-3"
-        >
-          <a
-            href="https://discord.gg/XTWVfJrjQw"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button
-              type="button"
-              class="btn btn-revi btn-warning btn-lg px-4 me-md-2"
-              href="https://www.google.com/forms"
-            >
-              Discover Your Faction
-            </button>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-        <img
-          class="rounded-lg-3"
-          src="assets/Stronka/question-mark.jpg"
-          alt=""
-          width=""
-          height="500px"
-        />
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal -->
