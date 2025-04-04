@@ -892,3 +892,51 @@ ANIMATIONS
     height: 420px;
   }
 }
+@media (max-width: 1000px) {
+  .hero .container {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-left-content {
+    flex: 1;
+    text-align: left !important;
+    align-self: center;
+    padding: 1rem;
+    max-width: 50%;
+  }
+
+  .hero-screenshot {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 50%;
+  }
+
+  .hero-screenshot img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 1rem;
+  }
+
+  .hero-blur-bar {
+    border-radius: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: none;
+    backdrop-filter: blur(8px);
+  }
+
+  .hero {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
