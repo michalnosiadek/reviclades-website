@@ -211,10 +211,341 @@ h1 {
   max-width: 300px; /* Adjust as desired */
   width: 100%;
   height: auto;
+  min-height: auto;
 }
 .character-video-natural {
   max-width: 300px; /* Adjust as desired */
   width: 100%;
   height: auto;
   max-width: 100%;
+}
+/* Card Library Layout */
+.card-library-page {
+  padding: 32px;
+  background-color: #14191e;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.card-library-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.card-library {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  justify-content: center;
+  padding: 2rem 1rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Card Frame and Components */
+.card-frame {
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  background: linear-gradient(to bottom, #1a1a1a, #2c2c2c);
+  border: 4px solid var(--card-color, #ff5c33);
+  border-radius: 16px;
+  overflow: hidden;
+  font-family: "Segoe UI", sans-serif;
+  color: white;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Element-based variations for Card Frame */
+.card-frame.fire-element {
+  --card-color: #ff5c33;
+}
+
+.card-frame.cold-element {
+  --card-color: #00bfff;
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  font-weight: bold;
+  font-size: var(--card-header-size, 18px);
+  background-color: var(--card-color, #ff5c33);
+}
+
+/* Card Cost */
+.card-cost {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 16px;
+  cursor: help;
+}
+
+.card-cost[data-bs-toggle="tooltip"] {
+  border-bottom: 1px dotted #fff;
+}
+
+/* Card Name */
+.card-name {
+  flex-grow: 1;
+  text-align: right;
+  color: #000000;
+  font-size: 20px;
+}
+
+/* Card Content Wrapper */
+.card-content-wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Card Image and Video */
+.card-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  border: none;
+}
+
+/* Card Description */
+.card-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 10px 14px;
+  text-align: center;
+  font-size: var(--card-text-size);
+  line-height: 1.5;
+  background-color: #1f1f1f;
+}
+
+.card-description p {
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+.card-description strong {
+  font-size: inherit;
+  font-weight: 600;
+  color: #ffaa4d;
+}
+
+.card-description em {
+  font-size: inherit;
+  color: #a0a0a0;
+  font-style: italic;
+  display: block;
+  margin-top: 8px;
+}
+
+/* Card Footer */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background-color: #2c2c2c;
+  font-size: 14px;
+  font-weight: bold;
+  border-top: 2px solid #444;
+  margin-top: auto;
+}
+
+/* Card Damage and Effect */
+.card-damage {
+  background-color: #8b0000;
+  padding: 4px 10px;
+  border-radius: 8px;
+  color: white;
+}
+
+.card-effect {
+  background-color: #006400;
+  padding: 4px 10px;
+  border-radius: 8px;
+  color: white;
+}
+
+/* Element-specific overrides for Card Description strong */
+.card-frame.fire-element .card-description strong {
+  color: #ffaa4d;
+}
+
+.card-frame.cold-element .card-description strong {
+  color: #80dfff;
+}
+
+/* Element-specific overrides for Card Damage */
+.card-frame.fire-element .card-damage {
+  background-color: #ff5c33;
+  color: black;
+}
+
+.card-frame.cold-element .card-damage {
+  background-color: #00bfff;
+  color: black;
+}
+
+/* Tooltip Styling */
+.card-description strong,
+.card-description .tooltip-word {
+  font-weight: 600;
+  cursor: help;
+}
+
+.card-description .tooltip-word-strong {
+  font-weight: 600;
+  cursor: help;
+  transition: color 0.2s;
+  /* No border-bottom */
+}
+
+.card-frame.fire-element .tooltip-word {
+  color: #ffaa4d;
+  border-bottom: 1px dotted #ffaa4d;
+}
+
+.card-frame.cold-element .tooltip-word {
+  color: #80dfff;
+  border-bottom: 1px dotted #80dfff;
+}
+
+.card-frame.fire-element .tooltip-word-strong {
+  color: #ffaa4d;
+}
+
+.card-frame.cold-element .tooltip-word-strong {
+  color: #80dfff;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 540px) {
+  .card-frame {
+    max-width: 100%;
+  }
+  .card-description {
+    font-size: 12.5px;
+    padding: 8px;
+  }
+  .card-name {
+    font-size: 18px;
+  }
+}
+
+/* Character Section Styles */
+.character-section {
+  width: 100vw;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.fire-section {
+  background-image: url("src/assets/factions/nation-fire.webp");
+}
+
+.earth-section {
+  background-image: url("src/assets/factions/nation-gorantulan.webp");
+}
+
+.character-section .overlay {
+  background-color: rgba(20, 25, 30, 0.88);
+  width: 100%;
+  padding: 5rem 0;
+}
+
+.character-name {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #ffaa4d;
+}
+
+.character-title strong {
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+/* Tabs Custom Styling */
+.character-tabs .nav-link {
+  color: #fff;
+  background: rgba(30, 30, 30, 0.9);
+  border: none;
+  margin-right: 8px;
+  border-radius: 8px 8px 0 0;
+  padding: 8px 20px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.character-tabs .nav-link.active,
+.character-tabs .nav-link:hover {
+  background-color: #ffaa4d;
+  color: #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  border-bottom: none;
+}
+
+/* Tab Content Box Styling */
+.character-tab-content {
+  background: rgba(20, 25, 30, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  padding: 24px;
+  color: var(--revi-text);
+  margin-top: 1.5rem;
+}
+
+.character-tab-content p {
+  margin-bottom: 1rem;
+}
+
+/* Character Video */
+.character-video {
+  max-width: 100%;
+  border-radius: 12px;
+  border: 4px solid #ffaa4d;
+  box-shadow: 0 0 12px rgba(255, 92, 51, 0.7);
+}
+
+.character-video.fire-element {
+  border: 4px solid #ff5c33;
+  border-radius: 16px;
+  box-shadow: 0 0 12px #ff5c33cc;
+}
+
+.character-video.cold-element {
+  border: 4px solid #00bfff;
+  border-radius: 16px;
+  box-shadow: 0 0 12px #00bfffcc;
 }
