@@ -3,6 +3,7 @@
 /* styles.css */
 
 :root {
+  --revi-button: #faa63b;
   --revi-wheat-30: #fde5c0;
 
   --revi-wheat-100: #f7a82d;
@@ -996,4 +997,16 @@ ANIMATIONS
   max-width: clamp(500px, 40vw, 800px);
   font-size: clamp(1.2rem, 1.2vw + 0.5rem, 2rem);
   z-index: 2;
+}
+.btn-warning {
+  background-color: #faa63b;
+  border-color: #faa63b;
+  color: #000; /* Keep it readable */
+}
+
+.btn-warning:hover,
+.btn-warning:focus {
+  background-color: #e2932e; /* Slightly darker for hover effect */
+  border-color: #e2932e;
+  color: #000;
 }
