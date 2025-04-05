@@ -758,6 +758,24 @@ h1 {
   margin-bottom: 1rem;
 }
 
+.character-tab-content.fire-element .tooltip-word {
+  color: var(--fire-color);
+  border-bottom: 1px dotted var(--fire-color);
+}
+
+.character-tab-content.cold-element .tooltip-word {
+  color: var(--cold-color);
+  border-bottom: 1px dotted var(--cold-color);
+}
+
+.character-tab-content.fire-element .tooltip-word-strong {
+  color: var(--fire-color);
+}
+
+.character-tab-content.cold-element .tooltip-word-strong {
+  color: var(--cold-color);
+}
+
 /* Character Video */
 
 .character-video {
