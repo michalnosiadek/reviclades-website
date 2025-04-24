@@ -28,6 +28,7 @@ import { AirKingdomComponent } from './factions-page/factions/air-kingdom/air-ki
 import { LightPilgrimsComponent } from './factions-page/factions/light-pilgrims/light-pilgrims.component';
 import { DarkCultComponent } from './factions-page/factions/dark-cult/dark-cult.component';
 import { GorantulandComponent } from './factions-page/factions/gorantuland/gorantuland.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,7 @@ import { GorantulandComponent } from './factions-page/factions/gorantuland/goran
     DarkCultComponent,
     GorantulandComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, RouterModule],
+  imports: [BrowserModule, AppRoutingModule, RouterModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

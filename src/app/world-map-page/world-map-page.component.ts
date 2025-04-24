@@ -1,57 +1,93 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 
+declare var bootstrap: any;
 @Component({
-    selector: 'app-world-map-page',
-    templateUrl: './world-map-page.component.html',
-    styleUrls: ['./world-map-page.component.css'],
-    standalone: false
+  selector: 'app-world-map-page',
+  templateUrl: './world-map-page.component.html',
+  styleUrls: ['./world-map-page.component.css'],
+  standalone: false,
 })
 export class WorldMapPageComponent {
-  @ViewChild('mySidebarLeft') mySidebarLeft!: ElementRef;
-  @ViewChild('mySidebarRight') mySidebarRight!: ElementRef;
-  @ViewChild('main') main!: ElementRef;
-
-  constructor(private renderer: Renderer2) {}
-
-  openNavLeft() {
-    this.renderer.setStyle(this.mySidebarLeft.nativeElement, 'width', '450px');
-    this.renderer.setStyle(
-      this.main.nativeElement,
-      'transform',
-      'translateX(450px)'
-    );
+  markers: any[] = [];
+  constructor(private http: HttpClient) {}
+  ngOnInit() {
+    this.http.get<any[]>('assets/data/factions.json').subscribe((data) => {
+      this.markers = data;
+    });
   }
 
-  closeNavLeft() {
-    this.renderer.setStyle(this.mySidebarLeft.nativeElement, 'width', '0');
-    this.renderer.setStyle(
-      this.main.nativeElement,
-      'transform',
-      'translateX(0)'
-    );
+  ngAfterViewInit() {
+    const modalEl = document.getElementById('factionModal');
+
+    if (modalEl) {
+      modalEl.addEventListener('hidden.bs.modal', () => {
+        const offcanvasEl = document.getElementById('kingdomInfo');
+        const bsOffcanvas = new bootstrap.Offcanvas(offcanvasEl);
+        bsOffcanvas.show();
+      });
+    }
+  }
+  highlightedNation: string | null = null;
+
+  highlightNation(nation: string) {
+    this.highlightedNation = nation;
+
+    const path = document.querySelector(`.nation-border.${nation}`);
+    if (path) {
+      path.classList.add('hovered');
+    }
   }
 
-  openNavRight() {
-    this.renderer.setStyle(this.mySidebarRight.nativeElement, 'width', '450px');
-    this.renderer.setStyle(
-      this.main.nativeElement,
-      'transform',
-      'translateX(-450px)'
-    );
+  unhighlightNation() {
+    if (this.highlightedNation) {
+      const path = document.querySelector(
+        `.nation-border.${this.highlightedNation}`
+      );
+      if (path) {
+        path.classList.remove('hovered');
+      }
+      this.highlightedNation = null;
+    }
   }
 
-  closeNavRight() {
-    this.renderer.setStyle(this.mySidebarRight.nativeElement, 'width', '0');
-    this.renderer.setStyle(
-      this.main.nativeElement,
-      'transform',
-      'translateX(0)'
-    );
+  selectedMarker: any = null;
+  overlayVisible = false;
+
+  showOverlay() {
+    this.overlayVisible = true;
   }
 
-  onMapClick() {
-    // logic to decide whether to open left or right nav
-    // for example:
-    // this.openNavLeft();
+  hideOverlay() {
+    this.overlayVisible = false;
+  }
+
+  onMarkerClick(name: string) {
+    alert(`You clicked on: ${name}`);
+  }
+  openModal() {
+    const offcanvasEl = document.getElementById('kingdomInfo');
+    const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+    bsOffcanvas.hide();
+
+    const modalEl = document.getElementById('factionModal');
+    const bsModal = new bootstrap.Modal(modalEl);
+
+    // Delay to ensure offcanvas fully closes before modal opens
+    setTimeout(() => {
+      bsModal.show();
+    }, 400);
+  }
+
+  selectMarker(marker: any) {
+    this.selectedMarker = marker;
+
+    const offcanvasElement = document.getElementById('kingdomInfo');
+    const bsOffcanvas = new bootstrap.Offcanvas(offcanvasElement);
+    bsOffcanvas.show();
+  }
+
+  generateSlug(faction: string): string {
+    return '/factions/' + faction.toLowerCase().replace(/\s+/g, '-');
   }
 }

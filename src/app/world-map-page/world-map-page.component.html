@@ -1,3 +1,151 @@
-<div class="world-map-background" (click)="onMapClick()">
-  <!-- your other html elements -->
+<div class="map-container">
+  <img src="assets/world-map.webp" alt="World Map" class="map-image" />
+  <div
+    *ngFor="let marker of markers"
+    class="marker"
+    [attr.data-slug]="marker.slug"
+    [ngClass]="marker.bg"
+    [style.left]="marker.x"
+    [style.top]="marker.y"
+    (mouseenter)="highlightNation(marker.slug)"
+    (mouseleave)="unhighlightNation()"
+    (click)="selectMarker(marker)"
+  >
+    <div class="marker-icon-wrapper">
+      <img [src]="marker.icon" class="marker-icon" alt="{{ marker.name }}" />
+    </div>
+    <div class="label-badge">
+      {{ marker.name }}
+    </div>
+  </div>
+
+  <!-- Optional: info panel -->
+  <!-- Offcanvas Kingdom Info -->
+  <div
+    class="offcanvas offcanvas-end"
+    tabindex="-1"
+    id="kingdomInfo"
+    aria-labelledby="kingdomInfoLabel"
+  >
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="kingdomInfoLabel">
+        {{ selectedMarker?.faction }}
+      </h5>
+      <button
+        type="button"
+        class="btn-close text-reset"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
+    </div>
+
+    <div class="offcanvas-body" *ngIf="selectedMarker">
+      <img
+        [src]="selectedMarker.image"
+        class="img-fluid mb-3 rounded"
+        alt="{{ selectedMarker.name }}"
+      />
+      <ul class="list-unstyled mb-3 ms-2">
+        <li>
+          <strong>Political System:</strong>
+          {{ selectedMarker.politicalSystem }}
+        </li>
+        <li><strong>Population:</strong> {{ selectedMarker.population }}</li>
+        <li><strong>Known for:</strong> {{ selectedMarker.knownFor }}</li>
+      </ul>
+
+      <h6 class="text-uppercase text-muted">Faction Background</h6>
+      <p>{{ selectedMarker.description }}</p>
+
+      <h6 class="text-uppercase text-muted">You as a citizen</h6>
+      <p>
+        <em>{{ selectedMarker.characterInsight }}</em>
+      </p>
+
+      <a (click)="openModal()" class="btn btn-warning btn-lg mt-2">
+        Learn more
+      </a>
+    </div>
+  </div>
+  <!-- Fullscreen Modal for Faction Details -->
+  <div class="modal fade" id="factionModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header">
+          <h5 class="modal-title">{{ selectedMarker?.faction }}</h5>
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body" *ngIf="selectedMarker">
+          <div class="row align-items-center mb-4">
+            <div class="col-md-6">
+              <img
+                [src]="selectedMarker.image"
+                class="img-fluid rounded"
+                alt="{{ selectedMarker.name }}"
+              />
+            </div>
+            <div class="col-md-6">
+              <h6 class="text-uppercase text-muted">Political System</h6>
+              <p>{{ selectedMarker.politicalSystem }}</p>
+              <h6 class="text-uppercase text-muted">Population</h6>
+              <p>{{ selectedMarker.population }}</p>
+              <h6 class="text-uppercase text-muted">Known for</h6>
+              <p>{{ selectedMarker.knownFor }}</p>
+            </div>
+          </div>
+
+          <h6 class="text-uppercase text-muted">Faction Background</h6>
+          <p>{{ selectedMarker.description }}</p>
+
+          <h6 class="text-uppercase text-muted">You as a citizen</h6>
+          <p>
+            <em>{{ selectedMarker.characterInsight }}</em>
+          </p>
+          <!-- <div class="row align-items-center mb-4">
+            <div class="col-md-6">
+              <img
+                [src]="selectedMarker.image"
+                class="img-fluid rounded"
+                alt="{{ selectedMarker.name }}"
+              />
+            </div>
+            <div class="col-md-6">
+              <h6 class="text-uppercase text-muted">Political System</h6>
+              <p>{{ selectedMarker.politicalSystem }}</p>
+              <h6 class="text-uppercase text-muted">Population</h6>
+              <p>{{ selectedMarker.population }}</p>
+              <h6 class="text-uppercase text-muted">Known for</h6>
+              <p>{{ selectedMarker.knownFor }}</p>
+            </div>
+          </div> -->
+          <!-- 
+          <h6 class="text-uppercase text-muted">Faction Background</h6>
+          <p>{{ selectedMarker.description }}</p>
+
+          <h6 class="text-uppercase text-muted">You as a citizen</h6>
+          <p>
+            <em>{{ selectedMarker.characterInsight }}</em>
+          </p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <svg
+    class="map-overlay"
+    viewBox="0 0 1920 1080"
+    preserveAspectRatio="xMidYMid slice"
+  >
+    <path
+      class="nation-border fire"
+      d="M800,700 L900,650 L940,720 L890,790 Z"
+      (mouseenter)="highlightNation('fire')"
+      (mouseleave)="unhighlightNation()"
+    />
+    <!-- Add more <path> elements for other nations -->
+  </svg>
 </div>

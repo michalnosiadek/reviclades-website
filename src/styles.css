@@ -60,7 +60,7 @@
 
   --light-color: #fef3b0;
 
-  --dark-color: #af7de7;
+  --dark-color: #8b1e1e;
 
   --tooltip-fire-border: 1px dotted var(--fire-color);
 
@@ -70,7 +70,7 @@
 * {
   font-family: "Sofia Sans Semi Condensed", sans-serif;
 
-  color: var(--revi-text);
+  /* color: var(--revi-text); */
 }
 
 h1 {
@@ -678,6 +678,10 @@ h1 {
 }
 
 .fire-section {
+  background-image: url("src/assets/factions/nation-fire.webp");
+}
+
+.fire-section-full {
   background-image: url("src/assets/factions/nation-fire.webp");
 }
 

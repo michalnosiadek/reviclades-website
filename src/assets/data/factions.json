@@ -1,0 +1,105 @@
+[
+  {
+    "name": "Fire Dominion",
+    "x": "43.5%",
+    "y": "55%",
+    "icon": "assets/icons/icon-fire-nation.png",
+    "bg": "fire-marker",
+    "image": "assets/factions/nation-fire.webp",
+    "faction": "Fire Folk",
+    "politicalSystem": "Theocracy",
+    "population": "300 million",
+    "knownFor": "Versatile food, religion, Immortal Bishop",
+    "description": "A conservative theocracy that holds piety above all. Devoted to the Fire God Fornax, the Fire Folk dedicate their lives and possessions to the Immortal Bishop's church. Peaceful by nature but fierce in debate, they tend fertile lands where fire blesses the soil. Their faith is unwavering, and though they avoid violence, their spiritual fire burns hot when challenged.",
+    "characterInsight": "You are a faithful soul, driven by purpose and purity. You avoid conflict but never turn your back on those in need. Fire is more than warmth to you—it's sacred."
+  },
+  {
+    "name": "Water Clan",
+    "x": "52%",
+    "y": "92%",
+    "bg": "water-marker",
+    "image": "assets/factions/nation-water.webp",
+    "icon": "assets/icons/icon-water-clan-2.png",
+
+    "faction": "Water Clan",
+    "politicalSystem": "Council of Seven",
+    "population": "680 million",
+    "knownFor": "Martial arts, 7 Heavenly Virtues, Best Cousin",
+    "description": "The Water Clan is a coalition of oceanic tribes that view one another as extended family. Peace reigns, upheld by lifelong martial and magical training starting from childhood. Violence is a last resort. Rich waters bless them with abundance, and their goddess chooses rulers from the Seven Virtues. Tradition, community, and nature are sacred.",
+    "characterInsight": "You are a pacifist at heart, loyal to your people and your traditions. Simplicity brings you joy, and technology often feels like a betrayal of nature."
+  },
+  {
+    "name": "Earth Kingdom",
+    "x": "24%",
+    "y": "72%",
+    "bg": "earth-marker",
+    "image": "assets/factions/nation-earth.webp",
+    "icon": "assets/icons/icon-earth-nation.png",
+
+    "faction": "Earth Nation",
+    "politicalSystem": "Artocracy",
+    "population": "900 million",
+    "knownFor": "Innovation, magic-fueled tech, master builders",
+    "description": "Built on hard work and brilliant minds, Earth Nation thrives in the deepest canyon cities. They value innovation over status, and their society revolves around magical technology. Artists, engineers, and mages form the backbone of a nation overflowing with inventions and enchanted wonders.",
+    "characterInsight": "You think fast and aim high. Magic is your toolkit, intellect your weapon. You’re not one for charity—you help when there’s reward."
+  },
+  {
+    "name": "Air Empire",
+    "x": "11%",
+    "y": "32%",
+    "bg": "air-marker",
+    "image": "assets/factions/nation-air.webp",
+    "icon": "assets/icons/icon-air-nation.png",
+
+    "faction": "Air Kingdom",
+    "politicalSystem": "Two Rulers Monarchy",
+    "population": "1.2 billion",
+    "knownFor": "Slavery, technology, deserts, powerful army",
+    "description": "A vast desert kingdom ruled by dual monarchs representing science and military. Technology thrives in airborne cities built on clouds—ironically constructed by slaves, the most populous caste. Aristocrats enjoy opulence, while Nomads and slaves survive beneath. Religion is banned, yet secretly worshipped. This society is harsh, structured, and rich.",
+    "characterInsight": "You are pragmatic and loyal to power. Magic takes a back seat to innovation. You believe money and technology are tools of dominance."
+  },
+  {
+    "name": "Light Enclave",
+    "x": "26%",
+    "y": "10%",
+    "bg": "light-marker",
+    "image": "assets/factions/nation-desert.webp",
+
+    "icon": "assets/icons/icon-light-pilgrim.png",
+
+    "faction": "Light Pilgrims",
+    "politicalSystem": "Autocracy",
+    "population": "?",
+    "knownFor": "Glasswork, drugs, devotion, wanderers",
+    "description": "A mysterious faction hidden in the desert. Light Pilgrims follow the blind prophet, Father of Light. They worship the Sun Goddess and value spiritual experience over material life. Blindness is seen as divine favor. Their cities are forgotten by all who leave. They trade in drugs, glass, and wisdom.",
+    "characterInsight": "You seek divine connection over worldly gain. Eccentric and devout, you cherish community and spiritual ecstasy more than anything."
+  },
+  {
+    "name": "Dark Cult",
+    "x": "45%",
+    "y": "20%",
+    "bg": "darkcult-marker",
+    "image": "assets/factions/nation-dark.webp",
+    "icon": "assets/icons/icon-dark-cult-3.png",
+    "faction": "Dark Cult",
+    "politicalSystem": "Anarchy",
+    "population": "?",
+    "knownFor": "Necromancy, secrecy, 7 Deadly Sins",
+    "description": "Shadowy and dangerous, the Dark Cult lures those willing to sacrifice anything for power. Its members blend into society: neighbors, rulers, even pets. Worship of the Dark Lord involves horrific rituals. The cult is ruled in part by the Seven Deadly Sins—semi-mythical beings worshipped as living gods.",
+    "characterInsight": "You do what must be done. No line is too dark to cross. You are chaos unleashed, and freedom is your only law."
+  },
+  {
+    "name": "Gorantuland",
+    "x": "62%",
+    "y": "46%",
+    "bg": "gorantuland-marker",
+    "image": "assets/factions/nation-gorantulan.webp",
+    "icon": "assets/icons/icon-gorantuland.png",
+    "faction": "Gorantuland",
+    "politicalSystem": "Democracy",
+    "population": "200k",
+    "knownFor": "Magical forests, scholars, unique physiology",
+    "description": "Formed from a blood pact between two ancient races, Gorantulans are a proud forest people born from sacrifice. With immense intellect and mutant strength, they defend their lands and educate even feral beasts. Their respect for all life is matched only by their commitment to growth and knowledge.",
+    "characterInsight": "You respect intellect, unity, and nature. You believe every being has potential—even monsters. You seek balance through discipline and learning."
+  }
+]

@@ -1,9 +1,223 @@
-/* world-map-page.component.css */
-.world-map-background {
-  min-height: 100vh; /* This will cover the full viewport height */
-  width: 100%; /* This will cover the full viewport width */
-  background-image: url("/assets/world-map.webp");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
+.map-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.map-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 15;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.marker:hover {
+  transform: translate(-50%, -55%) scale(1.08);
+}
+
+.marker-icon-wrapper {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px solid rgba(255, 174, 0, 0.85);
+  box-shadow: 0 0 10px rgba(255, 174, 0, 0.6), 0 0 18px rgba(255, 174, 0, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+.marker-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.8));
+}
+
+.label-badge {
+  margin-top: 6px;
+  padding: 3px 12px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(255, 174, 0, 0.85);
+  border-radius: 16px;
+  font-weight: 800;
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.9), 0 0 2px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 10px rgba(255, 174, 0, 0.6), 0 0 20px rgba(255, 174, 0, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+.label {
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 1.1;
+  color: #fff;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.9), 0 0 2px rgba(0, 0, 0, 0.8);
+}
+
+*/ .offcanvas-body {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.img-fluid {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.offcanvas-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 5;
+  pointer-events: auto;
+}
+
+.nation-border {
+  fill: transparent;
+  stroke-width: 3;
+  stroke: transparent;
+  transition: all 0.4s ease;
+  pointer-events: all;
+  cursor: pointer;
+}
+.nation-border.fire.hovered {
+  fill: rgba(255, 85, 0, 0.15);
+  stroke: rgba(255, 85, 0, 0.6);
+  filter: drop-shadow(0 0 10px rgba(255, 85, 0, 0.6));
+  transform: scale(1.015) translateY(-5px); /* subtle lift */
+  transform-origin: center;
+}
+@keyframes borderPulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 8px rgba(255, 85, 0, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 14px rgba(255, 85, 0, 0.7));
+  }
+}
+
+.nation-border.fire.hovered {
+  animation: borderPulse 1.8s infinite ease-in-out;
+}
+.region-group:hover .nation-border.fire {
+  fill: rgba(255, 85, 0, 0.15);
+  stroke: rgba(255, 85, 0, 0.6);
+  filter: drop-shadow(0 0 10px rgba(255, 85, 0, 0.6));
+  transform: scale(1.015) translateY(-5px);
+  transform-origin: center;
+  animation: borderPulse 1.8s infinite ease-in-out;
+}
+.region-group:hover .nation-border {
+  fill: rgba(255, 255, 255, 0.08);
+  stroke: rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+  transform: scale(1.01) translateY(-4px);
+  transform-origin: center;
+  animation: borderPulse 1.8s infinite ease-in-out;
+}
+
+.region-group:hover .marker {
+  transform: translate(-50%, -55%) scale(1.05);
+  box-shadow: 0 0 15px 6px rgba(255, 255, 255, 0.15);
+}
+
+.region-group.fire:hover .nation-border {
+  fill: rgba(255, 85, 0, 0.15);
+  stroke: rgba(255, 85, 0, 0.6);
+}
+
+.region-group:hover .marker {
+  transform: translate(-50%, -55%) scale(1.05);
+  box-shadow: 0 0 15px 6px rgba(255, 255, 255, 0.15);
+}
+.nation-border.fire.hovered {
+  fill: rgba(255, 85, 0, 0.15);
+  stroke: rgba(255, 85, 0, 0.6);
+  filter: drop-shadow(0 0 10px rgba(255, 85, 0, 0.6));
+  transform: scale(1.015) translateY(-5px);
+  transform-origin: center;
+  animation: borderPulse 1.8s infinite ease-in-out;
+}
+/* Fire */
+.fire-marker .marker-icon-wrapper,
+.fire-marker .label-badge {
+  border-color: var(--fire-color);
+  box-shadow: 0 0 10px var(--fire-color),
+    0 0 18px color-mix(in srgb, var(--fire-color) 60%, black);
+}
+
+/* Cold */
+.cold-marker .marker-icon-wrapper,
+.cold-marker .label-badge {
+  border-color: var(--cold-color);
+  box-shadow: 0 0 10px var(--cold-color),
+    0 0 18px color-mix(in srgb, var(--cold-color) 50%, black);
+}
+
+/* Earth */
+.earth-marker .marker-icon-wrapper,
+.earth-marker .label-badge {
+  border-color: var(--earth-color);
+  box-shadow: 0 0 10px var(--earth-color),
+    0 0 18px color-mix(in srgb, var(--earth-color) 50%, black);
+}
+
+/* Air */
+.air-marker .marker-icon-wrapper,
+.air-marker .label-badge {
+  border-color: var(--wind-color);
+  box-shadow: 0 0 10px var(--wind-color),
+    0 0 18px color-mix(in srgb, var(--wind-color) 50%, black);
+}
+
+/* Light */
+.light-marker .marker-icon-wrapper,
+.light-marker .label-badge {
+  border-color: var(--light-color);
+  box-shadow: 0 0 10px var(--light-color),
+    0 0 18px color-mix(in srgb, var(--light-color) 50%, black);
+}
+
+/* Dark Cult */
+.darkcult-marker .marker-icon-wrapper,
+.darkcult-marker .label-badge {
+  border-color: var(--dark-color);
+  box-shadow: 0 0 10px var(--dark-color),
+    0 0 18px color-mix(in srgb, var(--dark-color) 60%, black);
+}
+
+/* Water Clan */
+.water-marker .marker-icon-wrapper,
+.water-marker .label-badge {
+  border-color: var(--revi-light);
+  box-shadow: 0 0 10px var(--revi-light),
+    0 0 18px color-mix(in srgb, var(--revi-light) 60%, black);
+}
+
+/* Gorantuland */
+.gorantuland-marker .marker-icon-wrapper,
+.gorantuland-marker .label-badge {
+  border-color: #34d972; /* A vibrant forest green */
+  box-shadow: 0 0 10px #34d972, 0 0 18px color-mix(in srgb, #34d972 50%, black);
 }
