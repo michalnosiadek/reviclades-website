@@ -1,0 +1,31 @@
+<div class="container my-5 background-rough p-4">
+  <ng-container *ngIf="item; else loading">
+    <a routerLink="/news" class="btn btn-revi mb-3">&larr; Back to news</a>
+
+    <h1>{{ item.title }}</h1>
+    <small class="d-block mb-2">{{ item.date }}</small>
+
+    <img
+      *ngIf="item.imageUrl"
+      [src]="item.imageUrl"
+      alt="{{ item.title }}"
+      class="img-fluid mb-4"
+    />
+
+    <iframe
+      *ngIf="safeVideoUrl"
+      [src]="safeVideoUrl"
+      width="100%"
+      height="400"
+      frameborder="0"
+      allowfullscreen
+      class="mb-4"
+    ></iframe>
+
+    <div [innerHTML]="item.content"></div>
+  </ng-container>
+
+  <ng-template #loading>
+    <p>Loading news…</p>
+  </ng-template>
+</div>

@@ -1,0 +1,55 @@
+/* team.component.css */
+/* Wraps all rows vertically */
+about-us {
+  align-items: center;
+}
+.team-horizontal {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+/* ALWAYS side-by-side: portrait left, bio right */
+.team-row {
+  display: flex;
+  flex-direction: row; /* force horizontal */
+  align-items: center; /* vertical centering */
+  gap: 2rem;
+  justify-content: flex-start;
+  flex-wrap: wrap; /* allow wrapping on very small screens */
+}
+
+/* Portrait */
+.team-member {
+  flex: 0 0 auto; /* don’t grow or shrink below its intrinsic size */
+  width: clamp(120px, 12vw, 200px);
+  height: clamp(120px, 12vw, 200px);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--revi-wheat-130);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+.team-member img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.team-member:hover,
+.team-member.active {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px var(--revi-wheat-130);
+}
+
+/* Bio area */
+.team-bio {
+  flex: 1 1 0; /* take remaining space */
+  max-width: 600px; /* you can adjust or remove */
+  opacity: 0.9;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.team-bio.highlighted {
+  opacity: 1;
+  transform: scale(1.03);
+}

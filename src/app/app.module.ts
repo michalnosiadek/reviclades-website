@@ -29,6 +29,9 @@ import { LightPilgrimsComponent } from './factions-page/factions/light-pilgrims/
 import { DarkCultComponent } from './factions-page/factions/dark-cult/dark-cult.component';
 import { GorantulandComponent } from './factions-page/factions/gorantuland/gorantuland.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { NewsPageComponent } from './news-page/news-page.component';
+import { NewsDetailComponent } from './news-page/news-detail/news-detail.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -57,8 +60,17 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     LightPilgrimsComponent,
     DarkCultComponent,
     GorantulandComponent,
+    NewsPageComponent,
+    NewsDetailComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, RouterModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule,
+    HttpClientModule,
+    CommonModule,
+    RouterModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

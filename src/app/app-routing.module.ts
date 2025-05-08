@@ -21,6 +21,8 @@ import { AirKingdomComponent } from './factions-page/factions/air-kingdom/air-ki
 import { LightPilgrimsComponent } from './factions-page/factions/light-pilgrims/light-pilgrims.component';
 import { DarkCultComponent } from './factions-page/factions/dark-cult/dark-cult.component';
 import { GorantulandComponent } from './factions-page/factions/gorantuland/gorantuland.component';
+import { NewsPageComponent } from './news-page/news-page.component';
+import { NewsDetailComponent } from './news-page/news-detail/news-detail.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -43,7 +45,9 @@ const routes: Routes = [
   { path: 'light-pilgrims', component: LightPilgrimsComponent },
   { path: 'dark-cult', component: DarkCultComponent },
   { path: 'gorantuland', component: GorantulandComponent },
-
+  { path: 'news', component: NewsPageComponent },
+  { path: 'news', component: NewsPageComponent },
+  { path: 'news/:id', component: NewsDetailComponent },
   { path: '**', component: NotFoundPageComponent },
 ];
 

@@ -1,0 +1,25 @@
+<div class="news-wrapper my-5 px-4 py-5 rounded">
+  <div class="news-list container">
+    <div
+      *ngFor="let item of news; let isLast = last"
+      class="news-entry d-flex gap-4 align-items-start py-4"
+      [class.border-bottom]="!isLast"
+    >
+      <img
+        *ngIf="item.imageUrl"
+        [src]="item.imageUrl"
+        alt="{{ item.title }}"
+        class="news-thumb"
+      />
+
+      <div class="flex-grow-1">
+        <h4 class="mb-1">{{ item.title }}</h4>
+        <small class="d-block mb-2">{{ item.date }}</small>
+        <p class="mb-2">{{ item.teaser }}</p>
+        <a [routerLink]="['/news', item.id]" class="btn btn-warning btn-sm"
+          >Read more</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
