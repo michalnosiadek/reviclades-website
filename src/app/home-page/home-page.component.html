@@ -1,28 +1,34 @@
 <div class="hero d-flex align-items-center py-5 position-relative">
-  <!-- Stylish blurred bar background -->
   <div class="hero-blur-bar"></div>
 
-  <!-- Content -->
   <div
-    class="container d-flex flex-column flex-lg-row justify-content-between align-items-center position-relative z-2"
+    class="container d-flex flex-column flex-lg-row justify-content-between align-items-center position-relative z-2 hero-inner"
   >
+    <!-- LEFT TEXT -->
     <div class="hero-left-content p-4 text-center text-lg-start">
-      <!-- World tagline -->
+      <img src="/assets/logo.svg" alt="Reviclades" class="img-fluid logo-img" />
 
-      <!-- Game title and genre -->
-      <h1 class="fw-bold display-4">REVICLADES</h1>
-      <h2 class="mb-4 fs-4 text-uppercase">Multiplayer Card Game</h2>
+      <h2 class="mb-4 mt-3 fs-4 text-uppercase">Multiplayer Card Game</h2>
 
-      <!-- Feature hook -->
-      <p class="hero-subtitle mb-3">
+      <!-- IMAGE FOR MOBILE ONLY -->
+      <div class="hero-mobile-img d-lg-none mt-3 mb-3">
+        <img
+          src="assets/images/hero-section.jpg"
+          class="img-fluid rounded shadow-lg"
+          alt="Game screenshot"
+        />
+      </div>
+
+      <p class="hero-subtitle mb-3 text-justify">
         Tactical, turn-based arena where
         <span class="highlight">every card is a weapon</span>,
         <span class="highlight">every move a mind game</span>, and
         <span class="highlight">only the sharpest strategies survive</span>.
       </p>
+      <p class="hero-cta fs-5 text-justify">
+        Join our alpha to shape the future!
+      </p>
 
-      <!-- CTA -->
-      <p class="hero-cta">Join our alpha to shape the future!</p>
       <div
         class="mt-4 d-flex justify-content-center justify-content-lg-start gap-3"
       >
@@ -33,8 +39,8 @@
       </div>
     </div>
 
-    <!-- Screenshot -->
-    <div class="hero-screenshot mt-5 mt-lg-0">
+    <!-- IMAGE FOR DESKTOP ONLY -->
+    <div class="hero-screenshot d-none d-lg-block mt-4 mt-lg-0">
       <img
         src="assets/images/hero-section.jpg"
         class="img-fluid rounded shadow-lg"
@@ -43,6 +49,7 @@
     </div>
   </div>
 </div>
+
 <!-- SECTION: BUILD YOUR TEAM -->
 <!-- SECTION: BUILD YOUR TEAM -->
 <section
@@ -61,7 +68,7 @@
         alt="Deck building"
         style="width: 100%; height: auto; max-width: 1000px"
       />
-      <p class="fs-5 mb-4">
+      <p class="fs-5 mb-4 text-justify">
         Create your ultimate squad by pairing powerful cards with unique
         characters. Every decision shapes your strategy. Will you dominate with
         brute force or outmaneuver your foes with devastating combos?
@@ -131,7 +138,7 @@
       style="max-width: 960px"
     >
       <h2 class="display-4 fw-bold">EXPLORE THE WORLD</h2>
-      <p class="mt-3 fs-5 mb-4">
+      <p class="mt-3 fs-5 mb-4 text-justify">
         In the world of <strong>Reviclades</strong>, the elements are at
         war—fire scorches forests, winds carve mountains, and only strategy
         decides who survives.

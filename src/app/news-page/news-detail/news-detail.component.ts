@@ -26,7 +26,6 @@ export class NewsDetailComponent implements OnInit {
     this.svc.getById(id).subscribe((n) => {
       this.item = n;
       if (n?.videoUrl) {
-        // sanitize it once here
         this.safeVideoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
           n.videoUrl
         );

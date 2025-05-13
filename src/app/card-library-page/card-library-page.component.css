@@ -1,0 +1,14 @@
+.card-video-top {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+  object-position: top;
+
+  pointer-events: none;
+
+  border: none;
+}

@@ -33,7 +33,7 @@ export class AboutPageComponent {
     {
       name: 'Michał Nosiadek',
       image: '/assets/images/team/nosiadek.png',
-      bio: `From game systems to web design, Michał brings ideas to life with art and imagination. His passion for storytelling and fantasy fuels every line of code, creating worlds players love to explore.`,
+      bio: `Michał blends storytelling with technical finesse, building game systems and digital experiences that feel alive. Inspired by his love for fantasy and art, he brings to life worlds players love to explore.`,
     },
   ];
 }

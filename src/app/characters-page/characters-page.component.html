@@ -482,412 +482,848 @@
     <!-- end overlay -->
   </section>
 
-  <div *ngIf="development" class="container py-5">
-    <!-- 1) Fire Berserker (video left, tabs right) -->
-    <!-- end character section -->
+  <section
+    class="character-section gorantulan-hunter-section cold-element dark-section"
+  >
+    <div class="overlay">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <!-- Video Column -->
+          <div class="col-md-4 text-center">
+            <video
+              class="character-video-natural"
+              autoplay
+              muted
+              loop
+              playsinline
+            >
+              <source
+                src="assets/characters/bat-priest.webm"
+                type="video/webm"
+              />
+            </video>
+          </div>
 
-    <!-- 2) Gorantulan Hunter (video left, tabs right) -->
+          <!-- Tabs and Content Column -->
+          <div class="col-md-8">
+            <h2 class="character-name">Bat Priest</h2>
+            <p class="character-title">
+              <strong>Cunning Priestess of the Dark Lord</strong>
+            </p>
 
-    <!-- 3) Shrimp Monk (video left, tabs right) -->
-    <div class="row align-items-center mb-5">
-      <!-- Video on the left -->
-      <div class="col-md-4">
-        <video
-          class="img-fluid character-video"
-          src="assets/characters/shrimp-monk.webm"
-          autoplay
-          muted
-          loop
-          playsinline
-        >
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <!-- Tabs on the right -->
-      <div class="col-md-8">
-        <h2>Shrimp Monk</h2>
-        <p><strong>Greedy martial artist</strong></p>
+            <!-- Tabs -->
+            <ul class="nav nav-tabs character-tabs dark-tabs" role="tablist">
+              <li class="nav-item">
+                <button
+                  class="nav-link active"
+                  data-bs-toggle="tab"
+                  data-bs-target="#dark-bg"
+                >
+                  Background
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#dark-ability1"
+                  (click)="onTabChange('batPriest', 1)"
+                >
+                  Blood Pact
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#dark-ability2"
+                  (click)="onTabChange('batPriest', 2)"
+                >
+                  Claw Slash
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#dark-ability3"
+                  (click)="onTabChange('batPriest', 3)"
+                >
+                  Nightmare Tale
+                </button>
+              </li>
+            </ul>
 
-        <ul class="nav nav-tabs" id="shrimpMonkTabs" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link active"
-              id="shrimpMonkBackground-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#shrimpMonkBackground"
-              type="button"
-              role="tab"
-              aria-controls="shrimpMonkBackground"
-              aria-selected="true"
-            >
-              Background
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="shrimpMonkAbility1-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#shrimpMonkAbility1"
-              type="button"
-              role="tab"
-              aria-controls="shrimpMonkAbility1"
-              aria-selected="false"
-            >
-              Qi-Stance
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="shrimpMonkAbility2-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#shrimpMonkAbility2"
-              type="button"
-              role="tab"
-              aria-controls="shrimpMonkAbility2"
-              aria-selected="false"
-            >
-              Punch & Elbow
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="shrimpMonkAbility3-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#shrimpMonkAbility3"
-              type="button"
-              role="tab"
-              aria-controls="shrimpMonkAbility3"
-              aria-selected="false"
-            >
-              Tackle
-            </button>
-          </li>
-        </ul>
-        <div class="tab-content mt-3" id="shrimpMonkTabsContent">
-          <div
-            class="tab-pane fade show active"
-            id="shrimpMonkBackground"
-            role="tabpanel"
-            aria-labelledby="shrimpMonkBackground-tab"
-          >
-            <p>
-              At first glance you can’t tell what kind of person
-              <strong>Master Tempura </strong>is. Looking like a humble monk, he
-              attracts many people willing to learn Tempura’s craft.
-            </p>
-            <p>
-              Maybe it’s expensive but at least hard and demanding! But what you
-              expect from the shrimp that survived on deserts for years and
-              trained physical might with Gorantulans. Now it’s your chance to
-              become like him!” ~
-              <em>
-                Advertisement heard from a shrimp-like person in the village
-                near the Grand Canyon
-              </em>
-            </p>
+            <!-- Tab Content -->
+            <div class="tab-content character-tab-content dark-element">
+              <!-- Background -->
+              <div class="tab-pane active" id="dark-bg">
+                <p>
+                  <strong>Bahrana</strong> is one of those rare cases when a
+                  Feral becomes intelligent to the point she can be called a
+                  genius.
+                </p>
+                <p>
+                  In the past, one individual saved her life out of pure
+                  accident and decided to teach her their ways of living. Magic,
+                  languages, etiquette, fighting, alchemy and many other things
+                  that helped Bahrana in the future. With these skills she
+                  started to worship vigorously the
+                  <strong>Dark Lord</strong>. By deceiving people into joining
+                  the cult, promising immortality and chance to see again her
+                  dead relatives, she devours her victims. Each meal makes her
+                  stronger. Her appetite is infinite.
+                </p>
+              </div>
+
+              <!-- Misty Ice Trap -->
+              <div class="tab-pane" id="dark-ability1">
+                <div class="row align-items-center">
+                  <div class="col-md-7">
+                    <p>
+                      Every
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Damage taken by the user is transferred as healing to the ally."
+                      >
+                        Damage
+                      </span>
+                      received by the user is transferred as
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Restores health to the target equal to the damage prevented."
+                      >
+                        Healing
+                      </span>
+                      to the target.
+                    </p>
+                    <p>Lasts 1 round.</p>
+                    <em>When pain becomes a gift.</em>
+                  </div>
+
+                  <div class="col-md-5 text-end">
+                    <video
+                      class="character-video dark-element"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      *ngIf="selectedTabs['batPriest'] === 1"
+                    >
+                      <source
+                        src="assets/abilities/blood-pact.MP4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Headshot -->
+              <div class="tab-pane" id="dark-ability2">
+                <div class="row align-items-center">
+                  <div class="col-md-7">
+                    <p>
+                      Deal
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Damage scales with Strength: 2 + STR."
+                      >
+                        2 Dark Damage
+                      </span>
+                      to an enemy.
+                    </p>
+                    <p>
+                      Restore
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Healing scales with Strength: 7 + STR."
+                      >
+                        7 Health
+                      </span>
+                      to the active character.
+                    </p>
+                    <em
+                      >– From the book for adventurers: When some creature bites
+                      you and you feel not only pain but physic suffering, you
+                      are probably a victim of vampiric bite.</em
+                    >
+                  </div>
+
+                  <div class="col-md-5 text-end">
+                    <video
+                      class="character-video dark-element"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      *ngIf="selectedTabs['batPriest'] === 2"
+                    >
+                      <source
+                        src="assets/abilities/blood-letting.MP4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Camouflage Dash -->
+              <div class="tab-pane" id="dark-ability3">
+                <div class="row align-items-center">
+                  <div class="col-md-7">
+                    <p>
+                      Curse an opponent. Instead of healing during
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Sleep normally restores health each round. This effect reverses it."
+                      >
+                        sleep </span
+                      >, it takes
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Deals 5 damage per round. This damage does not interrupt sleep."
+                      >
+                        5 Dark Damage
+                      </span>
+                      each round.
+                    </p>
+                    <p>
+                      The target
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="The victim remains asleep despite taking damage."
+                      >
+                        does not wake up
+                      </span>
+                      from this effect.
+                    </p>
+                    <em
+                      >“Once upon a time... See? I told you it is a
+                      nightmare.”<br />~ *Lullaby of the Night* by Sylva
+                      Evergreen</em
+                    >
+                  </div>
+
+                  <div class="col-md-5 text-end">
+                    <video
+                      class="character-video dark-element"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      *ngIf="selectedTabs['batPriest'] === 3"
+                    >
+                      <source
+                        src="assets/abilities/pool-of-blood.MP4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end tab-content -->
           </div>
-          <div
-            class="tab-pane fade"
-            id="shrimpMonkAbility1"
-            role="tabpanel"
-            aria-labelledby="shrimpMonkAbility1-tab"
-          >
-            <p><strong>Ability 1:</strong> Shell Kick</p>
-            <p>Unleashes a powerful kick reinforced by hardened shell chi.</p>
-          </div>
-          <div
-            class="tab-pane fade"
-            id="shrimpMonkAbility2"
-            role="tabpanel"
-            aria-labelledby="shrimpMonkAbility2-tab"
-          >
-            <p><strong>Ability 2:</strong> Greedy Grab</p>
-            <p>
-              Attempts to snatch valuables or siphon enemy energy mid-combat.
-            </p>
-          </div>
-          <div
-            class="tab-pane fade"
-            id="shrimpMonkAbility3"
-            role="tabpanel"
-            aria-labelledby="shrimpMonkAbility3-tab"
-          >
-            <p><strong>Ability 3:</strong> Tidal Palm</p>
-            <p>
-              Channels water chi for a massive palm strike, pushing foes away.
-            </p>
-          </div>
+          <!-- end col-md-8 -->
         </div>
+        <!-- end row -->
       </div>
+      <!-- end container -->
     </div>
+    <!-- end overlay -->
+  </section>
 
-    <!-- 4) Bat Priest (video left, tabs right) -->
-    <div class="row align-items-center mb-5">
-      <!-- Video on the left -->
-      <div class="col-md-4">
-        <video
-          class="img-fluid character-video"
-          src="assets/characters/bat-priest.webm"
-          autoplay
-          muted
-          loop
-          playsinline
-        >
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <!-- Tabs on the right -->
-      <div class="col-md-8">
-        <h2>Bat Priest</h2>
-        <p>
-          <strong> Cunning priestess of the Dark Lord</strong>
-        </p>
-        <ul class="nav nav-tabs" id="batPriestTabs" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link active"
-              id="batPriestBackground-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#batPriestBackground"
-              type="button"
-              role="tab"
-              aria-controls="batPriestBackground"
-              aria-selected="true"
+  <section
+    class="character-section bat-priest-section water-element water-section"
+  >
+    <div class="overlay">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <!-- Video Column -->
+          <div class="col-md-4 text-center">
+            <video
+              class="character-video-natural"
+              autoplay
+              muted
+              loop
+              playsinline
             >
-              Background
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="batPriestAbility1-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#batPriestAbility1"
-              type="button"
-              role="tab"
-              aria-controls="batPriestAbility1"
-              aria-selected="false"
-            >
-              Blood Pact
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="batPriestAbility2-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#batPriestAbility2"
-              type="button"
-              role="tab"
-              aria-controls="batPriestAbility2"
-              aria-selected="false"
-            >
-              Vampiric Bite
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="batPriestAbility3-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#batPriestAbility3"
-              type="button"
-              role="tab"
-              aria-controls="batPriestAbility3"
-              aria-selected="false"
-            >
-              Nightmare Tale
-            </button>
-          </li>
-        </ul>
-        <div class="tab-content mt-3" id="batPriestTabsContent">
-          <div
-            class="tab-pane fade show active"
-            id="batPriestBackground"
-            role="tabpanel"
-            aria-labelledby="batPriestBackground-tab"
-          >
-            <p>
-              <strong>Bahrana</strong> is one of those rare cases when a Feral
-              becomes intelligent to the point she can be called a genius.
-            </p>
-            <p>
-              In the past, one individual saved her life out of pure accident
-              and decided to teach her their ways of living. Magic, languages,
-              etiquette, fighting, alchemy and many other things that helped
-              Bahrana in the future. With these skills she started to worship
-              vigorously the
-              <strong>Dark Lord</strong>. By deceiving people into joining the
-              cult, promising immortality and chance to see again her dead
-              relatives, she devours her victims. Each meal makes her stronger.
-              Her appetite is infinite.
-            </p>
+              <source
+                src="assets/characters/shrimp-monk.webm"
+                type="video/webm"
+              />
+            </video>
           </div>
-          <div
-            class="tab-pane fade"
-            id="batPriestAbility1"
-            role="tabpanel"
-            aria-labelledby="batPriestAbility1-tab"
-          >
-            <p><strong>Ability 1:</strong> Echolocation Burst</p>
-            <p>Releases a sonic wave, stunning enemies in its path.</p>
-          </div>
-          <div
-            class="tab-pane fade"
-            id="batPriestAbility2"
-            role="tabpanel"
-            aria-labelledby="batPriestAbility2-tab"
-          >
-            <p><strong>Ability 2:</strong> Dark Prayer</p>
-            <p>Channels forbidden magic to heal allies or harm foes.</p>
-          </div>
-          <div
-            class="tab-pane fade"
-            id="batPriestAbility3"
-            role="tabpanel"
-            aria-labelledby="batPriestAbility3-tab"
-          >
-            <p><strong>Ability 3:</strong> Winged Ascent</p>
-            <p>Temporarily takes flight, gaining high mobility and vantage.</p>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- 5) Crypt Shambler (video left, tabs right) -->
-    <div class="row align-items-center mb-5">
-      <!-- Video on the left -->
-      <div class="col-md-4">
-        <video
-          class="img-fluid character-video"
-          src="assets/characters/crypt-shambler.webm"
-          autoplay
-          muted
-          loop
-          playsinline
-        >
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <!-- Tabs on the right -->
-      <div class="col-md-8">
-        <h2>Crypt Shambler</h2>
-        <p>
-          <strong>Mechanical construct overtaken by madness</strong>
-        </p>
-        <ul class="nav nav-tabs" id="cryptShamblerTabs" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link active"
-              id="cryptShamblerBackground-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#cryptShamblerBackground"
-              type="button"
-              role="tab"
-              aria-controls="cryptShamblerBackground"
-              aria-selected="true"
-            >
-              Background
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="cryptShamblerAbility1-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#cryptShamblerAbility1"
-              type="button"
-              role="tab"
-              aria-controls="cryptShamblerAbility1"
-              aria-selected="false"
-            >
-              Fissure
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="cryptShamblerAbility2-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#cryptShamblerAbility2"
-              type="button"
-              role="tab"
-              aria-controls="cryptShamblerAbility2"
-              aria-selected="false"
-            >
-              Boom Bot
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="cryptShamblerAbility3-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#cryptShamblerAbility3"
-              type="button"
-              role="tab"
-              aria-controls="cryptShamblerAbility3"
-              aria-selected="false"
-            >
-              Tunnel Passage
-            </button>
-          </li>
-        </ul>
-        <div class="tab-content mt-3" id="cryptShamblerTabsContent">
-          <div
-            class="tab-pane fade show active"
-            id="cryptShamblerBackground"
-            role="tabpanel"
-            aria-labelledby="cryptShamblerBackground-tab"
-          >
-            <p>
-              “Here as you can see is one of the typical mining models from the
-              old world’s <strong>Transmigation project</strong>. A drill to
-              destroy stone matter under cities shattered by earthquake. Strong
-              tail to hold stones and the ceiling of tunnels. Claws to cut metal
-              cables and lines.
+          <!-- Tabs and Content Column -->
+          <div class="col-md-8">
+            <h2 class="character-name">Shrimp Monk</h2>
+            <p class="character-title">
+              <strong>Greedy Martial Artist</strong>
             </p>
-            <p>
-              Just imagine if this specimen was alive! This is really a miracle
-              of the past people! Look at it and remember that even advanced
-              technology can’t win over time.” ~
-              <em>Tour Guide in Museum of Lost Memories inside Ape Nation</em>
-            </p>
+
+            <!-- Tabs -->
+            <ul class="nav nav-tabs character-tabs water-tabs" role="tablist">
+              <li class="nav-item">
+                <button
+                  class="nav-link active"
+                  data-bs-toggle="tab"
+                  data-bs-target="#water-bg"
+                >
+                  Background
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#water-ability1"
+                  (click)="onTabChange('shrimpMonk', 1)"
+                >
+                  Qi-Stance
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#water-ability2"
+                  (click)="onTabChange('shrimpMonk', 2)"
+                >
+                  Punch & Elbow
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#water-ability3"
+                  (click)="onTabChange('shrimpMonk', 3)"
+                >
+                  Counter Attack
+                </button>
+              </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content character-tab-content water-element">
+              <!-- Background -->
+              <div class="tab-pane active" id="water-bg">
+                <p>
+                  At first glance you can’t tell what kind of person
+                  <strong>Master Tempura </strong>is. Looking like a humble
+                  monk, he attracts many people willing to learn Tempura’s
+                  craft.
+                </p>
+                <p>
+                  Maybe it’s expensive but at least hard and demanding! But what
+                  you expect from the shrimp that survived on deserts for years
+                  and trained physical might with Gorantulans. Now it’s your
+                  chance to become like him!” ~
+                  <em>
+                    Advertisement heard from a shrimp-like person in the village
+                    near the Grand Canyon
+                  </em>
+                </p>
+              </div>
+
+              <!-- Misty Ice Trap -->
+              <div class="tab-pane" id="water-ability1">
+                <div class="row align-items-center">
+                  <div class="col-md-7">
+                    <p>
+                      When you use this ability, you channel your Qi to choose
+                      one of three paths:
+                    </p>
+                    <p>
+                      Choose
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Evades the next random-targeted attack."
+                      >
+                        dodge
+                      </span>
+                      to evade the next random attack.
+                    </p>
+                    <p>
+                      Choose
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Blocks the next melee-targeted attack."
+                      >
+                        block
+                      </span>
+                      to block the next melee attack.
+                    </p>
+                    <p>
+                      Choose
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Deals 20 damage and applies Stun."
+                      >
+                        strike
+                      </span>
+                      to hit your enemy for 20 Damage and apply
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Stunned characters skip their next turn."
+                      >
+                        Stun </span
+                      >.
+                    </p>
+                    <em>
+                      Some masters of Qi seem that they can predict the future.
+                      They move exactly at the right time to the right place and
+                      seem to evade all attempts to hit them while they
+                      annihilate you.
+                    </em>
+                  </div>
+
+                  <div class="col-md-5 text-end">
+                    <video
+                      class="character-video water-element"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      *ngIf="selectedTabs['shrimpMonk'] === 1"
+                    >
+                      <source
+                        src="assets/abilities/qi-stance.MP4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Headshot -->
+              <div class="tab-pane" id="water-ability2">
+                <div class="row align-items-center">
+                  <div class="col-md-7">
+                    <p>
+                      Strike an enemy to deal
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Deals 4 Water Damage. Water deals bonus damage to Fire enemies."
+                      >
+                        4 Water Damage </span
+                      >.
+                    </p>
+                    <p>
+                      If used after another
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Melee physical abilities are basic close-range physical attacks."
+                      >
+                        melee physical damage
+                      </span>
+                      ability, it also applies
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Stunned characters skip their next turn."
+                      >
+                        Stun </span
+                      >.
+                    </p>
+                    <em>
+                      So-called surprise combo. Feared by many. Signature move
+                      of a warrior with initials BGC.
+                    </em>
+                  </div>
+
+                  <div class="col-md-5 text-end">
+                    <video
+                      class="character-video water-element"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      *ngIf="selectedTabs['shrimpMonk'] === 2"
+                    >
+                      <source
+                        src="assets/abilities/punch-and-elbow.MP4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Camouflage Dash -->
+              <div class="tab-pane" id="water-ability3">
+                <div class="row align-items-center">
+                  <div class="col-md-7">
+                    <p>
+                      Apply
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Special effects can trigger in response to enemy actions or specific conditions."
+                      >
+                        Special
+                      </span>
+                      on the user.
+                    </p>
+                    <p>
+                      After receiving
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Melee physical damage refers to close-range physical attacks like slashes or punches."
+                      >
+                        melee physical damage </span
+                      >, retaliate with
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Deals 3 Water Damage to the attacker. Water deals bonus damage to Fire enemies."
+                      >
+                        3 Water Damage
+                      </span>
+                      to the attacker.
+                    </p>
+                    <em>
+                      Some masters of weapons from Water Tribes never attack
+                      first. They patiently wait for their opponent to start,
+                      then finish the duel in a split second.
+                    </em>
+                  </div>
+
+                  <div class="col-md-5 text-end">
+                    <video
+                      class="character-video water-element"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      *ngIf="selectedTabs['shrimpMonk'] === 3"
+                    >
+                      <source
+                        src="assets/abilities/counter-attack.MP4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end tab-content -->
           </div>
-          <div
-            class="tab-pane fade"
-            id="cryptShamblerAbility1"
-            role="tabpanel"
-            aria-labelledby="cryptShamblerAbility1-tab"
-          >
-            <p><strong>Ability 1:</strong> Rusted Slash</p>
-            <p>A decaying blade that inflicts lingering damage over time.</p>
-          </div>
-          <div
-            class="tab-pane fade"
-            id="cryptShamblerAbility2"
-            role="tabpanel"
-            aria-labelledby="cryptShamblerAbility2-tab"
-          >
-            <p><strong>Ability 2:</strong> Unholy Gears</p>
-            <p>
-              Temporarily overclocks its mechanical limbs for rapid strikes.
-            </p>
-          </div>
-          <div
-            class="tab-pane fade"
-            id="cryptShamblerAbility3"
-            role="tabpanel"
-            aria-labelledby="cryptShamblerAbility3-tab"
-          >
-            <p><strong>Ability 3:</strong> Necro Pulse</p>
-            <p>Emits a wave of dark energy that reanimates nearby corpses.</p>
-          </div>
+          <!-- end col-md-8 -->
         </div>
+        <!-- end row -->
       </div>
+      <!-- end container -->
     </div>
-  </div>
+    <!-- end overlay -->
+  </section>
+  <section
+    class="character-section crypt-shambler-section normal-element normal-section"
+  >
+    <div class="overlay">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <!-- Video Column -->
+          <div class="col-md-4 text-center">
+            <video
+              class="character-video-natural"
+              autoplay
+              muted
+              loop
+              playsinline
+            >
+              <source
+                src="assets/characters/crypt-shambler.webm"
+                type="video/webm"
+              />
+            </video>
+          </div>
+
+          <!-- Tabs and Content Column -->
+          <div class="col-md-8">
+            <h2 class="character-name">Crypt Shambler</h2>
+            <p class="character-title">
+              <strong>Mechanical Construct Overtaken by Madness</strong>
+            </p>
+
+            <!-- Tabs -->
+            <ul class="nav nav-tabs character-tabs normal-tabs" role="tablist">
+              <li class="nav-item">
+                <button
+                  class="nav-link active"
+                  data-bs-toggle="tab"
+                  data-bs-target="#normal-bg"
+                >
+                  Background
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#normal-ability1"
+                  (click)="onTabChange('cryptShambler', 1)"
+                >
+                  Fissure
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#normal-ability2"
+                  (click)="onTabChange('cryptShambler', 2)"
+                >
+                  Boombot
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#normal-ability3"
+                  (click)="onTabChange('cryptShambler', 3)"
+                >
+                  Turret Mode
+                </button>
+              </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content character-tab-content normal-element">
+              <!-- Background -->
+              <div class="tab-pane active" id="normal-bg">
+                <p>
+                  “Here as you can see is one of the typical mining models from
+                  the old world’s <strong>Transmigation project</strong>. A
+                  drill to destroy stone matter under cities shattered by
+                  earthquake. Strong tail to hold stones and the ceiling of
+                  tunnels. Claws to cut metal cables and lines.
+                </p>
+                <p>
+                  Just imagine if this specimen was alive! This is really a
+                  miracle of the past people! Look at it and remember that even
+                  advanced technology can’t win over time.” ~
+                  <em
+                    >Tour Guide in Museum of Lost Memories inside Ape Nation</em
+                  >
+                </p>
+              </div>
+
+              <!-- Misty Ice Trap -->
+              <div class="tab-pane" id="normal-ability1">
+                <div class="row align-items-center">
+                  <div class="col-md-7">
+                    <p>
+                      Summon
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Area of Effect: affects all characters in a line."
+                      >
+                        2 obstacles in a straight line </span
+                      >.
+                    </p>
+                    <p>
+                      Every character in the path of the fissure takes
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Deals 2 Damage to each character in the line. Affected by Intelligence."
+                      >
+                        2 Damage
+                      </span>
+                      and is pushed
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Characters are moved 2 tiles away from the caster."
+                      >
+                        2 tiles </span
+                      >.
+                    </p>
+                    <p>
+                      The summoned obstacles
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Obstacles block movement and line of sight. They vanish after 3 rounds."
+                      >
+                        disappear after 3 rounds </span
+                      >.
+                    </p>
+                    <em>
+                      By the power of an earth deity, conjure stone spikes to
+                      crush and impale opponents. This move was used to change
+                      the tide of wars during ancient skirmishes.
+                    </em>
+                  </div>
+
+                  <div class="col-md-5 text-end">
+                    <video
+                      class="character-video normal-element"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      *ngIf="selectedTabs['cryptShambler'] === 1"
+                    >
+                      <source
+                        src="assets/abilities/fissure.MP4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Headshot -->
+              <div class="tab-pane" id="normal-ability2">
+                <div class="row align-items-center">
+                  <div class="col-md-7">
+                    <p>
+                      Summon a
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="A temporary ally that moves independently and detonates under certain conditions."
+                      >
+                        minion
+                      </span>
+                      that targets the closest enemy.
+                    </p>
+                    <p>
+                      When adjacent to a target or destroyed, it explodes,
+                      dealing
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Area of Effect: 2x2 explosion deals 10 Damage to all units within range."
+                      >
+                        10 AOE Damage </span
+                      >.
+                    </p>
+                    <p>
+                      <em>Boombot stats:</em> 10 HP · 3 MP · Explosion radius:
+                      2×2 tiles
+                    </p>
+                    <em>
+                      “Gather around people. Today I want to present Boom Bot!
+                      It’s a cute little pet that will follow your friends.
+                      Perfect as a kid’s toy. When you buy 2 of them, one is
+                      free!”<br />
+                      ~ some shady merchant on the Earth Nation market
+                    </em>
+                  </div>
+
+                  <div class="col-md-5 text-end">
+                    <video
+                      class="character-video normal-element"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      *ngIf="selectedTabs['cryptShambler'] === 2"
+                    >
+                      <source
+                        src="assets/abilities/boombot.MP4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Camouflage Dash -->
+              <div class="tab-pane" id="normal-ability3">
+                <div class="row align-items-center">
+                  <div class="col-md-7">
+                    <p>
+                      After remaining stationary for
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="You must not move for 1 round to activate this effect."
+                      >
+                        1 round </span
+                      >, gain a
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Special state that enhances all ability ranges by 4 tiles."
+                      >
+                        special buff </span
+                      >.
+                    </p>
+                    <p>
+                      While active, all abilities gain
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Your abilities can now be cast 4 tiles farther than normal."
+                      >
+                        +4 tile range </span
+                      >.
+                    </p>
+                    <p>
+                      Any movement
+                      <span
+                        class="tooltip-word"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="If you move, the buff is immediately removed."
+                      >
+                        cancels the effect </span
+                      >.
+                    </p>
+                    <em>
+                      Mechanoids, while standing still, can alter their bodies
+                      to achieve feats previously impossible just moments
+                      before.
+                    </em>
+                  </div>
+
+                  <div class="col-md-5 text-end">
+                    <video
+                      class="character-video normal-element"
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      *ngIf="selectedTabs['cryptShambler'] === 3"
+                    >
+                      <source
+                        src="assets/abilities/turret-mode.MP4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end tab-content -->
+          </div>
+          <!-- end col-md-8 -->
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+    </div>
+    <!-- end overlay -->
+  </section>
 </section>
