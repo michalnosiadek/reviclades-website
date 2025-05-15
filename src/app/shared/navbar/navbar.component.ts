@@ -1,22 +1,20 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { LoginService } from 'src/app/login/login.service';
+import * as bootstrap from 'bootstrap';
 
 @Component({
-    selector: 'app-navbar',
-    templateUrl: './navbar.component.html',
-    styleUrls: ['./navbar.component.css'],
-    standalone: false
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css'],
+  standalone: false,
 })
 export class NavbarComponent implements OnInit {
-  constructor(
-    private loginService: LoginService,
-    private router: Router
-  ) {}
+  constructor(private loginService: LoginService, private router: Router) {}
 
   ngOnInit(): void {
     // Close menu whenever a new route finishes loading
-    this.router.events.subscribe(event => {
+    this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.closeMenuIfOpen();
       }
@@ -36,14 +34,15 @@ export class NavbarComponent implements OnInit {
   onDocumentClick(event: MouseEvent) {
     const menu = document.getElementById('navbarTogglerDemo02');
     const toggler = document.querySelector('.navbar-toggler');
+    const target = event.target as HTMLElement;
 
-    // Check if the menu is currently open (Bootstrap adds the "show" class)
-    if (menu?.classList.contains('show')) {
-      const target = event.target as HTMLElement;
-      // If click is NOT inside the menu and NOT on the toggler button
-      if (!menu.contains(target) && !toggler?.contains(target)) {
-        this.toggleMenu(); // close it
-      }
+    if (
+      menu?.classList.contains('show') &&
+      !menu.contains(target) &&
+      !toggler?.contains(target)
+    ) {
+      const bsCollapse = bootstrap.Collapse.getInstance(menu);
+      bsCollapse?.hide();
     }
   }
 
@@ -52,17 +51,32 @@ export class NavbarComponent implements OnInit {
    */
   private closeMenuIfOpen(): void {
     const menu = document.getElementById('navbarTogglerDemo02');
-    if (menu?.classList.contains('show')) {
-      this.toggleMenu();
+    const bsCollapse = bootstrap.Collapse.getInstance(menu!);
+    if (menu?.classList.contains('show') && bsCollapse) {
+      bsCollapse.hide();
     }
   }
 
   /**
    * Triggers the same toggle event Bootstrap uses to open/close the menu
    */
-  private toggleMenu(): void {
-    document
-      .querySelector('.navbar-toggler')
-      ?.dispatchEvent(new Event('click'));
+  toggleMenu(): void {
+    const menu = document.getElementById('navbarTogglerDemo02');
+    if (!menu) return;
+
+    let bsCollapse = bootstrap.Collapse.getInstance(menu);
+
+    if (!bsCollapse) {
+      // If no instance exists yet, create one
+      bsCollapse = new bootstrap.Collapse(menu, {
+        toggle: false,
+      });
+    }
+
+    if (menu.classList.contains('show')) {
+      bsCollapse.hide();
+    } else {
+      bsCollapse.show();
+    }
   }
 }

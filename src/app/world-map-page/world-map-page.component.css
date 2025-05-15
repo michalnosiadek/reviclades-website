@@ -213,3 +213,21 @@
   border-color: #34d972; /* A vibrant forest green */
   box-shadow: 0 0 10px #34d972, 0 0 18px color-mix(in srgb, #34d972 50%, black);
 }
+@media (max-width: 768px) {
+  .marker-icon-wrapper {
+    padding: 4px;
+    border-width: 1px;
+    box-shadow: 0 0 6px rgba(255, 174, 0, 0.6), 0 0 10px rgba(255, 174, 0, 0.3);
+  }
+
+  .marker-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .label-badge {
+    font-size: 0.75rem;
+    padding: 1px 4px;
+    box-shadow: 0 0 6px rgba(255, 174, 0, 0.6), 0 0 12px rgba(255, 174, 0, 0.3);
+  }
+}
