@@ -118,7 +118,7 @@
                   <div class="col-md-5 text-end">
                     <img
                       *ngIf="selectedTabs['fireBerserker'] === 1"
-                      src="assets/abilities/burning-last-words.webp"
+                      src="assets/abilities/burning-last-words.jpg"
                       class="character-video fire-element"
                     />
                   </div>
@@ -154,7 +154,7 @@
                   <div class="col-md-5 text-end">
                     <img
                       *ngIf="selectedTabs['fireBerserker'] === 2"
-                      src="assets/abilities/flame-swing.webp"
+                      src="assets/abilities/flame-swing.jpg"
                       class="character-video fire-element"
                     />
                   </div>
@@ -195,7 +195,7 @@
                   <div class="col-md-5 text-end">
                     <img
                       *ngIf="selectedTabs['fireBerserker'] === 3"
-                      src="assets/abilities/square-of-fire.webp"
+                      src="assets/abilities/square-of-fire.jpg"
                       class="character-video fire-element"
                     />
                   </div>
@@ -339,7 +339,7 @@
                   <div class="col-md-5 text-end">
                     <img
                       *ngIf="selectedTabs['gorantulanHunter'] === 1"
-                      src="assets/abilities/misty-ice-trap.webp"
+                      src="assets/abilities/misty-ice-trap.jpg"
                       class="character-video cold-element"
                     />
                   </div>
@@ -379,7 +379,7 @@
                   <div class="col-md-5 text-end">
                     <img
                       *ngIf="selectedTabs['gorantulanHunter'] === 2"
-                      src="assets/abilities/headshot.webp"
+                      src="assets/abilities/headshot.jpg"
                       class="character-video cold-element"
                     />
                   </div>
@@ -416,7 +416,7 @@
                   <div class="col-md-5 text-end">
                     <img
                       *ngIf="selectedTabs['gorantulanHunter'] === 3"
-                      src="assets/abilities/camuflage-dash.webp"
+                      src="assets/abilities/camouflage-dash.jpg"
                       class="character-video cold-element"
                     />
                   </div>
@@ -558,7 +558,7 @@
                   <div class="col-md-5 text-end">
                     <img
                       *ngIf="selectedTabs['batPriest'] === 1"
-                      src="assets/abilities/blood-pact.webp"
+                      src="assets/abilities/blood-pact.jpg"
                       class="character-video dark-element"
                     />
                   </div>
@@ -601,7 +601,7 @@
                   <div class="col-md-5 text-end">
                     <img
                       *ngIf="selectedTabs['batPriest'] === 2"
-                      src="assets/abilities/blood-letting.webp"
+                      src="assets/abilities/blood-letting.jpg"
                       class="character-video dark-element"
                     />
                   </div>
@@ -651,7 +651,7 @@
                   <div class="col-md-5 text-end">
                     <img
                       *ngIf="selectedTabs['batPriest'] === 3"
-                      src="assets/abilities/pool-of-blood.webp"
+                      src="assets/abilities/pool-of-blood.jpg"
                       class="character-video dark-element"
                     />
                   </div>
@@ -822,7 +822,7 @@
                   <div class="col-md-5 text-end">
                     <img
                       *ngIf="selectedTabs['shrimpMonk'] === 1"
-                      src="assets/abilities/qi-stance.webp"
+                      src="assets/abilities/bow-swing.jpg"
                       class="character-video water-element"
                     />
                   </div>
@@ -870,7 +870,7 @@
                   <div class="col-md-5 text-end">
                     <img
                       *ngIf="selectedTabs['shrimpMonk'] === 2"
-                      src="assets/abilities/punch-and-elbow.webp"
+                      src="assets/abilities/punch-and-elbow.jpg"
                       class="character-video water-element"
                     />
                   </div>
@@ -920,7 +920,7 @@
                   <div class="col-md-5 text-end">
                     <img
                       *ngIf="selectedTabs['shrimpMonk'] === 3"
-                      src="assets/abilities/counter-attack.webp"
+                      src="assets/abilities/counter-attack.jpg"
                       class="character-video water-element"
                     />
                   </div>
@@ -945,11 +945,18 @@
         <div class="row align-items-center">
           <!-- Video Column -->
           <div class="col-md-4 text-center">
-            <img
-              *ngIf="selectedTabs['cryptShambler'] === 1"
-              src="assets/abilities/fissure.webp"
-              class="character-video normal-element"
-            />
+            <video
+              class="character-video-natural"
+              autoplay
+              muted
+              loop
+              playsinline
+            >
+              <source
+                src="assets/characters/crypt-shambler.webm"
+                type="video/webm"
+              />
+            </video>
           </div>
 
           <!-- Tabs and Content Column -->
@@ -1073,19 +1080,11 @@
                   </div>
 
                   <div class="col-md-5 text-end">
-                    <video
-                      class="character-video normal-element"
-                      autoplay
-                      muted
-                      loop
-                      playsinline
+                    <img
                       *ngIf="selectedTabs['cryptShambler'] === 1"
-                    >
-                      <source
-                        src="assets/abilities/fissure.webp"
-                        type="video/webp"
-                      />
-                    </video>
+                      src="assets/abilities/fissure.jpg"
+                      class="character-video normal-element"
+                    />
                   </div>
                 </div>
               </div>
@@ -1132,7 +1131,7 @@
                   <div class="col-md-5 text-end">
                     <img
                       *ngIf="selectedTabs['cryptShambler'] === 2"
-                      src="assets/abilities/boombot.webp"
+                      src="assets/abilities/boombot.jpg"
                       class="character-video normal-element"
                     />
                   </div>
@@ -1190,7 +1189,7 @@
                   <div class="col-md-5 text-end">
                     <img
                       *ngIf="selectedTabs['cryptShambler'] === 3"
-                      src="assets/abilities/turret-mode.webp"
+                      src="assets/abilities/turret-mode.jpg"
                       class="character-video normal-element"
                     />
                   </div>
