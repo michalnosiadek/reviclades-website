@@ -10,8 +10,16 @@ declare var bootstrap: any;
 })
 export class WorldMapPageComponent {
   markers: any[] = [];
+  isMobile = false;
   constructor(private http: HttpClient) {}
   ngOnInit() {
+    this.checkScreenSize();
+    window.addEventListener('resize', this.checkScreenSize.bind(this));
+
+    this.http.get<any[]>('assets/data/factions.json').subscribe((data) => {
+      this.markers = data;
+    });
+
     this.http.get<any[]>('assets/data/factions.json').subscribe((data) => {
       this.markers = data;
     });
@@ -86,7 +94,9 @@ export class WorldMapPageComponent {
     const bsOffcanvas = new bootstrap.Offcanvas(offcanvasElement);
     bsOffcanvas.show();
   }
-
+  checkScreenSize() {
+    this.isMobile = window.innerWidth <= 768;
+  }
   generateSlug(faction: string): string {
     return '/factions/' + faction.toLowerCase().replace(/\s+/g, '-');
   }
