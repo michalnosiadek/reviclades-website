@@ -1,289 +1,45 @@
 <section class="revi-page-dark-background">
   <div class="container py-5">
     <div class="main-timeline-2">
-      <div class="timeline-2 left-2">
-        <div class="card">
-          <img
-            src="assets/Stronka/roadmap/1.jpg"
-            class="card-img-top"
-            alt="Responsive image"
-          />
-          <div class="card-body p-4">
-            <p class="text-muted mb-4">
-              <i class="far fa-clock" aria-hidden="true"></i> 08.2021
-            </p>
-            <p class="mb-0">
-              the idea came up while talking about the times when we used to
-              play turn-based games. It was a general concept, a set of
-              prototype rules of the game and we started shaping our main team.
-            </p>
+      <ng-container *ngFor="let item of visibleTimeline">
+        <div class="timeline-2" [ngClass]="item.side + '-2'">
+          <div class="card">
+            <img
+              *ngIf="item.type === 'image'"
+              [src]="item.src"
+              loading="lazy"
+              class="card-img-top"
+              alt="Roadmap image"
+            />
+            <video
+              *ngIf="item.type === 'video'"
+              [attr.data-src]="item.src"
+              type="video/mp4"
+              class="card-img-top lazy-video"
+              preload="none"
+              controls
+              muted
+              playsinline
+            ></video>
+
+            <audio
+              *ngIf="item.type === 'audio'"
+              [attr.data-src]="item.src"
+              type="audio/webm"
+              class="lazy-audio"
+              preload="none"
+              controls
+            ></audio>
+
+            <div class="card-body p-4">
+              <p class="text-muted mb-4">
+                <i class="far fa-clock"></i> {{ item.date }}
+              </p>
+              <p class="mb-0">{{ item.description }}</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="timeline-2 right-2">
-        <div class="card">
-          <img
-            src="assets/Stronka/roadmap/2.jpg"
-            class="card-img-top"
-            alt="Responsive image"
-          />
-          <div class="card-body p-4">
-            <p class="text-muted mb-4">
-              <i class="far fa-clock" aria-hidden="true"></i> 10.2021
-            </p>
-            <p class="mb-0">
-              Bored with using ready character assets, team suggested the first
-              character based on classic fire elemental from fantasy genre. Fire
-              Berserker Hector.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="timeline-2 left-2">
-        <div class="card">
-          <img
-            src="assets/Stronka/roadmap/3.jpg"
-            class="card-img-top"
-            alt="Responsive image"
-          />
-          <div class="card-body p-4">
-            <p class="text-muted mb-4">
-              <i class="far fa-clock" aria-hidden="true"></i> 11.2021
-            </p>
-            <p class="mb-0">
-              Lore creation and first world map drawing. We focused on the lore
-              to create interesting world starting with main plot and early
-              history of Reviclades.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="timeline-2 right-2">
-        <div class="card">
-          <img
-            src="assets/Stronka/roadmap/4.jpg"
-            class="card-img-top"
-            alt="Responsive image"
-          />
-          <div class="card-body p-4">
-            <p class="text-muted mb-4">
-              <i class="far fa-clock" aria-hidden="true"></i> 12.2021
-            </p>
-            <p class="mb-0">
-              On of our first turning points. We decided to convert game to the
-              isometric grid. Thanks to that we keep more tactical perspective
-              in Reviclades as a strategy game.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="timeline-2 left-2">
-        <div class="card">
-          <video
-            src="assets/Stronka/roadmap/5.mp4"
-            controls
-            class="card-img-top"
-            alt="Responsive video"
-          ></video>
-          <div class="card-body p-4">
-            <p class="text-muted mb-4">
-              <i class="far fa-clock" aria-hidden="true"></i> 02.2022
-            </p>
-            <p class="mb-0">
-              Test arena was made to help us try game in action.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="timeline-2 right-2">
-        <div class="card">
-          <video
-            src="assets/Stronka/roadmap/6v2.mp4"
-            controls
-            class="card-img-top"
-            alt="Responsive video"
-          ></video>
-          <div class="card-body p-4">
-            <p class="text-muted mb-4">
-              <i class="far fa-clock" aria-hidden="true"></i> 05.2022
-            </p>
-            <p class="mb-0">
-              Creation of new game engine focused on various abilities and
-              interactions between them.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="timeline-2 left-2">
-        <div class="card">
-          <img
-            src="assets/Stronka/roadmap/7.jpg"
-            class="card-img-top"
-            alt="Responsive image"
-          />
-          <div class="card-body p-4">
-            <p class="text-muted mb-4">
-              <i class="far fa-clock" aria-hidden="true"></i> 07.2022
-            </p>
-            <p class="mb-0">
-              New additions like: playable characters, music, animations and
-              many other assets
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="timeline-2 right-2">
-        <div class="card">
-          <img
-            src="assets/Stronka/roadmap/8.jpg"
-            class="card-img-top"
-            alt="Responsive image"
-          />
-          <div class="card-body p-4">
-            <p class="text-muted mb-4">
-              <i class="far fa-clock" aria-hidden="true"></i> 10.2022
-            </p>
-            <p class="mb-0">
-              First ready to use map that is, and will be, first playable map.
-              for players.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="timeline-2 left-2">
-        <div class="card">
-          <img
-            src="assets/Stronka/roadmap/9.jpg"
-            class="card-img-top"
-            alt="Responsive image"
-          />
-          <div class="card-body p-4">
-            <p class="text-muted mb-4">
-              <i class="far fa-clock" aria-hidden="true"></i> 12.2023
-            </p>
-            <p class="mb-0">Concept of world map.</p>
-          </div>
-        </div>
-      </div>
-      <div class="timeline-2 right-2">
-        <div class="card">
-          <video
-            src="assets/Stronka/roadmap/10.mp4"
-            controls
-            class="card-img-top"
-            alt="Responsive video"
-          ></video>
-          <div class="card-body p-4">
-            <p class="text-muted mb-4">
-              <i class="far fa-clock" aria-hidden="true"></i> 05.2023
-            </p>
-            <p class="mb-0">
-              VFX, sound effects, card designs, character’s animations.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="timeline-2 left-2">
-        <div class="card">
-          <img
-            src="assets/Stronka/roadmap/11.jpg"
-            class="card-img-top"
-            alt="Responsive image"
-          />
-          <div class="card-body p-4">
-            <p class="text-muted mb-4">
-              <i class="far fa-clock" aria-hidden="true"></i> 05.2023
-            </p>
-            <p class="mb-0">
-              website concept + interactive world map prototype.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="timeline-2 right-2">
-        <div class="card">
-          <img
-            src="assets/Stronka/roadmap/12.jpg"
-            class="card-img-top"
-            alt="Responsive image"
-          />
-          <div class="card-body p-4">
-            <p class="text-muted mb-4">
-              <i class="far fa-clock" aria-hidden="true"></i> 08.2023
-            </p>
-            <p class="mb-0">
-              Series of test games when we decided to completely change
-              play-styles of characters.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="timeline-2 left-2">
-        <div class="card">
-          <img
-            src="assets/Stronka/roadmap/13.jpg"
-            class="card-img-top"
-            alt="Responsive image"
-          />
-          <div class="card-body p-4">
-            <p class="text-muted mb-4">
-              <i class="far fa-clock" aria-hidden="true"></i> 10.2023
-            </p>
-            <p class="mb-0">In game UI upgrades.</p>
-          </div>
-        </div>
-      </div>
-      <div class="timeline-2 right-2">
-        <div class="card">
-          <img
-            src="assets/Stronka/roadmap/14.jpg"
-            class="card-img-top"
-            alt="Responsive image"
-          />
-          <div class="card-body p-4">
-            <p class="text-muted mb-4">
-              <i class="far fa-clock" aria-hidden="true"></i> 12.2023
-            </p>
-            <p class="mb-0">
-              Upgrades of descriptions, pictograms and other text based content.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="timeline-2 left-2">
-        <div class="card">
-          <video
-            src="assets/Stronka/roadmap/15.mp4"
-            controls
-            class="card-img-top"
-            alt="Responsive video"
-          ></video>
-          <div class="card-body p-4">
-            <p class="text-muted mb-4">
-              <i class="far fa-clock" aria-hidden="true"></i> 01.2024
-            </p>
-            <p class="mb-0">
-              Polishing way we wanted to present our gameplay. Better visibility
-              of player’s actions.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="timeline-2 right-2">
-        <div class="card">
-          <img
-            src="assets/Stronka/roadmap/16.jpg"
-            class="card-img-top"
-            alt="Responsive image"
-          />
-          <div class="card-body p-4">
-            <p class="text-muted mb-4">
-              <i class="far fa-clock" aria-hidden="true"></i> 02.2024
-            </p>
-            <p class="mb-0">Beginning of replacing old deck builder.</p>
-          </div>
-        </div>
-      </div>
+      </ng-container>
     </div>
   </div>
 </section>

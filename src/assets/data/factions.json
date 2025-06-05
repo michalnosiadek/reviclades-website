@@ -5,7 +5,7 @@
     "y": "55%",
     "xMobile": "28%",
     "yMobile": "55%",
-    "icon": "assets/icons/icon-fire-nation.png",
+    "icon": "assets/icons/icon-fire-nation.webp",
     "bg": "fire-marker",
     "image": "assets/factions/nation-fire.webp",
     "faction": "Fire Folk",
@@ -23,7 +23,7 @@
     "yMobile": "95%",
     "bg": "water-marker",
     "image": "assets/factions/nation-water.webp",
-    "icon": "assets/icons/icon-water-clan-2.png",
+    "icon": "assets/icons/icon-water-clan-2.webp",
 
     "faction": "Water Clan",
     "politicalSystem": "Council of Seven",
@@ -39,7 +39,7 @@
 
     "bg": "earth-marker",
     "image": "assets/factions/nation-earth.webp",
-    "icon": "assets/icons/icon-earth-nation.png",
+    "icon": "assets/icons/icon-earth-nation.webp",
 
     "faction": "Earth Nation",
     "politicalSystem": "Artocracy",
@@ -56,7 +56,7 @@
     "yMobile": "42%",
     "bg": "air-marker",
     "image": "assets/factions/nation-air.webp",
-    "icon": "assets/icons/icon-air-nation.png",
+    "icon": "assets/icons/icon-air-nation.webp",
 
     "faction": "Air Kingdom",
     "politicalSystem": "Two Rulers Monarchy",
@@ -74,7 +74,7 @@
     "bg": "light-marker",
     "image": "assets/factions/nation-desert.webp",
 
-    "icon": "assets/icons/icon-light-pilgrim.png",
+    "icon": "assets/icons/icon-light-pilgrim.webp",
 
     "faction": "Light Pilgrims",
     "politicalSystem": "Autocracy",
@@ -91,7 +91,7 @@
     "yMobile": "20%",
     "bg": "darkcult-marker",
     "image": "assets/factions/nation-dark.webp",
-    "icon": "assets/icons/icon-dark-cult-3.png",
+    "icon": "assets/icons/icon-dark-cult-3.webp",
     "faction": "Dark Cult",
     "politicalSystem": "Anarchy",
     "population": "?",
@@ -107,7 +107,7 @@
     "yMobile": "40%",
     "bg": "gorantuland-marker",
     "image": "assets/factions/nation-gorantulan.webp",
-    "icon": "assets/icons/icon-gorantuland.png",
+    "icon": "assets/icons/icon-gorantuland.webp",
     "faction": "Gorantuland",
     "politicalSystem": "Democracy",
     "population": "200k",
