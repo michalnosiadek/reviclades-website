@@ -1,0 +1,15 @@
+.lazy-img {
+  filter: blur(5px);
+  transition: filter 0.5s ease-out;
+}
+img:not(.lazy-img) {
+  filter: none;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.8s ease-out;
+}
+.animate-on-scroll {
+  opacity: 0;
+}

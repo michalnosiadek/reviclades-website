@@ -1,4 +1,8 @@
-<div class="hero d-flex align-items-center py-5 position-relative">
+<div
+  class="hero d-flex align-items-center py-5 position-relative lazy-bg"
+  data-bg="assets/Stronka/arena-dark.webp"
+  style="min-height: 100vh"
+>
   <div class="hero-blur-bar"></div>
 
   <div
@@ -6,16 +10,22 @@
   >
     <!-- LEFT TEXT -->
     <div class="hero-left-content p-4 text-center text-lg-start">
-      <img src="/assets/logo.svg" alt="Reviclades" class="img-fluid logo-img" />
+      <img
+        data-src="/assets/logo.svg"
+        alt="Reviclades"
+        class="img-fluid logo-img lazy-img"
+        loading="lazy"
+      />
 
       <h2 class="mb-4 mt-3 fs-4 text-uppercase">Multiplayer Card Game</h2>
 
       <!-- IMAGE FOR MOBILE ONLY -->
       <div class="hero-mobile-img d-lg-none mt-3 mb-3">
         <img
-          src="assets/images/hero-section.webp"
-          class="img-fluid rounded shadow-lg"
+          data-src="assets/images/hero-section.webp"
+          class="img-fluid rounded shadow-lg lazy-img"
           alt="Game screenshot"
+          loading="lazy"
         />
       </div>
 
@@ -35,16 +45,16 @@
         <a href="https://discord.gg/XTWVfJrjQw" class="btn btn-discord"
           >Join Discord</a
         >
-        <!-- <a routerLink="/about" class="btn btn-warning">Learn more</a> -->
       </div>
     </div>
 
     <!-- IMAGE FOR DESKTOP ONLY -->
     <div class="hero-screenshot d-none d-lg-block mt-4 mt-lg-0">
       <img
-        src="assets/images/hero-section.webp"
-        class="img-fluid rounded shadow-lg hero-img"
+        data-src="assets/images/hero-section.webp"
+        class="img-fluid rounded shadow-lg hero-img lazy-img"
         alt="Game screenshot"
+        loading="lazy"
       />
     </div>
   </div>
@@ -53,8 +63,9 @@
 <!-- SECTION: BUILD YOUR TEAM -->
 <!-- SECTION: BUILD YOUR TEAM -->
 <section
-  class="hero hero-2 d-flex align-items-center py-5"
-  style="min-height: 100vh; background-size: cover; background-position: center"
+  class="hero hero-2 d-flex align-items-center py-5 lazy-bg"
+  data-bg="assets/images/ancient-contracts.webp"
+  style="min-height: 100vh"
 >
   <div class="container-fluid px-5">
     <div
@@ -63,10 +74,11 @@
     >
       <h2 class="display-4 fw-bold mb-4">BUILD YOUR TEAM</h2>
       <img
-        src="assets/images/card-library-0.webp"
-        class="img-fluid rounded shadow-lg mb-4 hero-img"
+        data-src="assets/images/card-library-0.webp"
+        class="img-fluid rounded shadow-lg mb-4 hero-img lazy-img"
         alt="Deck building"
         style="width: 100%; height: auto"
+        loading="lazy"
       />
 
       <p class="fs-5 mb-4 text-justify">
@@ -91,18 +103,12 @@
       <!-- Fire Berserker with stylish frame -->
       <div class="character-portrait-wrapper">
         <div class="character-video-frame">
-          <video
-            autoplay
-            muted
-            loop
-            playsinline
+          <img
             class="character-video-element"
-          >
-            <source
-              src="assets/characters/fire-berserker.webm"
-              type="video/webm"
-            />
-          </video>
+            loading="lazy"
+            src="assets/characters/fire-berserker-2.webp"
+            alt="Fire Berserker"
+          />
         </div>
       </div>
 
@@ -114,8 +120,8 @@
           equip them with tailored abilities. Your team is only as strong as the
           minds behind it.
         </p>
-        <em class="quote">
-          “Sometimes brute force is the only way around.” — Fire Berserker</em
+        <em class="quote"
+          >“Sometimes brute force is the only way around.” — Fire Berserker</em
         >
         <blockquote class="fst-italic text-warning text-end"></blockquote>
         <div class="text-end mt-3">
@@ -130,8 +136,9 @@
 
 <!-- SECTION: EXPLORE THE WORLD -->
 <section
-  class="hero hero-4 d-flex align-items-center py-5"
-  style="min-height: 100vh; background-size: cover; background-position: center"
+  class="hero hero-4 d-flex align-items-center py-5 lazy-bg"
+  data-bg="assets/images/tree.webp"
+  style="min-height: 100vh"
 >
   <div class="container-fluid px-5">
     <div
@@ -146,10 +153,11 @@
       </p>
 
       <img
-        src="assets/images/world-map.webp"
-        class="img-fluid rounded shadow-lg mb-4"
+        data-src="assets/images/world-map.webp"
+        class="img-fluid rounded shadow-lg mb-4 lazy-img"
         alt="World Map"
         style="width: 100%"
+        loading="lazy"
       />
 
       <a routerLink="/world-map" class="btn btn-warning">Open World Map</a>
